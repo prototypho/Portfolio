@@ -630,4 +630,88 @@
     height: 18px;
     margin-left: 8px;
   }
+
+
+/* ---------- CONTENEDOR ROTATE/CARDS ---------- */
+  .cont_rotate{
+    height: 320px;      /* antes 400px :contentReference[oaicite:2]{index=2} */
+    margin-top: 4.5rem; /* antes 7rem :contentReference[oaicite:3]{index=3} */
+    margin-bottom: 2rem;
+  }
+
+  .card-stream{
+    height: 300px;      /* antes 380px :contentReference[oaicite:4]{index=4} */
+  }
+
+  /* CLAVE: quita anchos fijos para mobile */
+  .card-line{
+    gap: 18px;          /* antes 60px :contentReference[oaicite:5]{index=5} */
+    width: auto !important;  /* antes 1200px !important :contentReference[oaicite:6]{index=6} */
+    padding-inline: 12px;
+  }
+
+  /* Tarjetas: que entren en el ancho del teléfono */
+  .card-wrapper{
+    width: 320px;       /* antes 400 :contentReference[oaicite:7]{index=7} */
+    height: 205px;      /* antes 250 :contentReference[oaicite:8]{index=8} */
+  }
+
+  .card,
+  .card-ascii{
+    width: 320px;       /* antes 400 :contentReference[oaicite:9]{index=9} */
+    height: 205px;      /* antes 250 :contentReference[oaicite:10]{index=10} */
+    border-radius: 14px;
+  }
+
+  /* Full image card (otra variante de tarjeta) */
+  .full-image-card{
+    width: 320px;       /* antes 400 :contentReference[oaicite:11]{index=11} */
+    height: 205px;      /* antes 250 :contentReference[oaicite:12]{index=12} */
+    border-radius: 16px;
+  }
+
+  .full-image-card h3{
+    font-size: 20px;    /* antes 30 :contentReference[oaicite:13]{index=13} */
+    padding: 6px 10px;
+    top: 12px;
+    left: 12px;
+    max-width: calc(100% - 24px);
+  }
+
+  .fic-overlay{
+    padding: 14px;
+  }
+
+  .fic-overlay p{
+    font-size: 13px;
+    max-width: 92%;
+  }
+
+  /* ASCII: reduce densidad para que no “ensucie” en móvil */
+  .ascii-content{
+    font-size: 9px;     /* antes 11 :contentReference[oaicite:14]{index=14} */
+    line-height: 11px;  /* antes 13 :contentReference[oaicite:15]{index=15} */
+  }
+
+  /* ---------- Drag hint ---------- */
+  .drag-hint-wrapper{
+    padding-top: 18%;   /* antes 22% :contentReference[oaicite:16]{index=16} */
+    justify-content: center;
+  }
+
+  .drag-hint-content span{
+    font-size: 11px;
+  }
+
+  /* ---------- Canvas / overlays que usan 100vw ---------- */
+  #particleCanvas,
+  #scannerCanvas{
+    width: 100%;
+    left: 0;
+  }
+
+  /* Si en mobile molesta la “instructions” a la derecha, escóndela */
+  .instructions{
+    display: none;
+  }
 }

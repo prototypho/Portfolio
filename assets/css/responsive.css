@@ -1,0 +1,232 @@
+/* =============================================================
+📱 3) MOBILE GRANDE — (376px – 425px) TRABAJA ACA PARA CELU!
+============================================================= */
+@media (min-width: 376px) and (max-width: 425px) {
+    .hero-title {
+    font-size: 21px;
+    width: 540px;
+    }
+    .cursor {
+        width: 3px;
+        height: 22px;
+        
+    }
+    .hero-sub {
+        width: 340px;
+        font-size: 12px;
+        
+    }
+    .btn-primary,
+    .btn-ghost {
+        font-size: 10px;
+        padding: 11px 20px;
+    }
+    .hero-meta {
+        font-size: 8px;
+        letter-spacing: 0.05em;
+        margin-top: 10px;
+        
+    }
+    .hero-right {
+        margin-top: 2rem;
+        min-height: 120px;
+    }
+    .page{
+        padding: 14px 10px 40px;
+    }
+    .hero-card {
+        height: 300px;
+        padding: 10px 8px;
+    }
+    .encode-card {
+
+    width: 350px;
+    height: 250px;
+
+    }
+    .hero-chip {
+        right: auto;
+        left: 20%;
+        top: 4%;
+    }
+    .separacion1 {
+        height: 20px;
+    }
+    .hero-main-image-wrap {
+        margin-top: 1px;
+        height: 210px;
+
+    }
+    .rotate-title {
+        position: absolute;
+        font-size: 20px;
+        padding-bottom: 3rem;
+        padding-right: 50%;
+    
+    }
+    .drag-hint-wrapper {
+        padding-top: 42%;
+    }
+    .project-card {
+        width: 320px;
+        height: 340px;
+        perspective: 1200px;
+    }
+    .project-back p {
+        font-size: 14px;
+    }
+    .project-back p {
+        font-size: 12px;
+    }
+    .hero-line{
+        font-size: 28px;
+        line-height: 1.5;
+        max-width: 300px;
+        margin-right: 30%;
+
+    }
+    .section {
+        margin-bottom: 44px;
+        width: 100%;
+        margin-left: 0%;
+        
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .service-card {
+        min-height: 130px;
+        max-width: 350px;
+    }
+    .testimonios-cyberpunk {
+        padding: 1rem 1rem;
+        
+    }
+    .tech-title {
+    font-size: 28px;
+    
+    }
+    .projects-title {
+        font-size: 28px;
+        margin-right: 10%;
+    }
+    .projects-sub {
+        font-size: 14px;
+        margin-right: 10%;
+    }
+    .testimonio-card {
+        padding: 1rem 1rem;
+        width: 380px;
+        margin-bottom: 7rem;
+        margin-right: 6%;
+    }
+    .logo-testimonio {
+        bottom: -112px;        /* hace que sobresalga */
+        right: -1px;      /* ajusta para que salga del borde */
+        width: 230px;
+        height: 180px;
+        padding: 1px;
+        margin-right: 5px;
+       
+    }
+    .btn-enlace {
+        font-size: 10px;
+        letter-spacing: 0.05em;
+    }
+    .testimonio-texto {
+        font-size: 14px;
+    }
+    .testimonio-card h3 {
+        font-size: 18px;
+    }
+    .about-section {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .about-title {
+        margin-left: 0%;
+    }
+    .about-wrapper {
+        width: 320px;
+        padding-right: 0;
+        margin-left: 0%;
+    }
+    .about-text h3 {
+        font-size: 26px;
+        margin-bottom: 8px;
+        
+    }
+    .about-text p {
+        font-size: 14px;
+        width: 350px;
+    }
+    .about-text {
+        margin-right: 50%;
+    }
+    .foot1, .foot2 {
+        font-size: 10px;
+    }
+
+
+
+}
+
+
+/* =============================================================
+📲 4) TABLET — (426px – 768px)
+============================================================= */
+@media (min-width: 426px) and (max-width: 768px) {
+    
+
+
+
+}
+
+
+/* =============================================================
+💻 5) NOTEBOOK PEQUEÑO — (769px – 1024px)
+============================================================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+
+
+
+}
+
+
+
+/* =============================================================
+💻 6) NOTEBOOK 15" — (1025px – 1366px)
+============================================================= */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    
+    
+}
+
+
+/* =============================================================
+🖥️ 7) DESKTOP — (1367px – 1440px)
+============================================================= */
+@media (min-width: 1367px) and (max-width: 1440px) {
+    
+    
+    
+}
+
+
+/* =============================================================
+🖥️ 8) FULL HD — (1441px – 1920px)
+============================================================= */
+@media (min-width: 1441px) and (max-width: 1920px) {
+    
+}
+
+
+/* =============================================================
+🖥️ 9) ULTRA WIDE / 4K — (1921px +)
+============================================================= */
+@media (min-width: 1921px) {
+    /* estilos aquí */
+}

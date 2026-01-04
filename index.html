@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/heroline.css">
     <link rel="stylesheet" href="assets/css/cursor.css">
     <link rel="stylesheet" href="assets/css/sub_cards.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <!-- Estilos para el fondo de Three.js -->
     <style>
@@ -57,32 +58,75 @@
         <img src="assets/img/JR dev_small.png" alt="JR dev logo">
       </div>
 
-      <nav class="nav__links">
-        <a href="#servicios" class="nav__link">Dienstleistungen</a>
-        <a href="#proyectos" class="nav__link">Projekte</a>
-        <a href="#sobre-mi" class="nav__link">Über mich</a>
-      </nav>
+      <!-- Todo lo que va a la derecha -->
+      <div class="nav__right">
+        <nav class="nav__links" id="nav-links">
+          <a href="#servicios" class="nav__link">Dienstleistungen</a>
+          <a href="#proyectos" class="nav__link">Projekte</a>
+          <a href="#sobre-mi" class="nav__link">Über mich</a>
+        </nav>
 
-      <!-- 🔹 NUEVO: banderas horizontales -->
-      <div class="nav__lang" id="nav-lang">
-        <a class="lang-pill" href="#" data-lang="de" aria-label="Deutsch">
-          <img class="lang-flag" src="assets/img/svg-png/flag_g.png" alt="DE">
-          <span class="lang-text">DE</span>
-        </a>
-        <a class="lang-pill" href="/en/index.html" data-lang="en" aria-label="English">
-          <img class="lang-flag" src="assets/img/svg-png/flag_en.png" alt="EN">
-          <span class="lang-text">EN</span>
-        </a>
-        <a class="lang-pill" href="/es/index.html" data-lang="es" aria-label="Español">
-          <img class="lang-flag" src="assets/img/svg-png/flag_es.png" alt="ES">
-          <span class="lang-text">ES</span>
-        </a>
+        <div class="nav__lang" id="nav-lang">
+          <a class="lang-pill" href="#" data-lang="de" aria-label="Deutsch">
+            <img class="lang-flag" src="assets/img/svg-png/flag_g.png" alt="DE">
+            <span class="lang-text" data-glitch="DE">DE</span>
+          </a>
+          <a class="lang-pill" href="/en/index.html" data-lang="en" aria-label="English">
+            <img class="lang-flag" src="assets/img/svg-png/flag_en.png" alt="EN">
+            <span class="lang-text" data-glitch="EN">EN</span>
+          </a>
+          <a class="lang-pill" href="/es/index.html" data-lang="es" aria-label="Español">
+            <img class="lang-flag" src="assets/img/svg-png/flag_es.png" alt="ES">
+            <span class="lang-text" data-glitch="ES">ES</span>
+          </a>
+        </div>
+
+        <button id="btn-abrir-modal" class="btn-cyberpunk nav__ctaBtn">
+          Kontakt aufnehmen
+        </button>
+
+        <!-- Hamburguesa (solo visible en mobile) -->
+        <button class="nav__toggle"
+                id="nav-toggle"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="nav-panel">
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+        </button>
       </div>
 
-      <button id="btn-abrir-modal" class="btn-cyberpunk">
-        Kontakt aufnehmen
-      </button>
+      <!-- Panel mobile (clonado/mostrado) -->
+      <div class="nav__panel" id="nav-panel" hidden>
+        <nav class="nav__panelLinks">
+          <a href="#servicios" class="nav__panelLink">Dienstleistungen</a>
+          <a href="#proyectos" class="nav__panelLink">Projekte</a>
+          <a href="#sobre-mi" class="nav__panelLink">Über mich</a>
+        </nav>
+
+        <div class="nav__panelLang">
+          <!-- Reutiliza tus pills -->
+          <a class="lang-pill" href="#" data-lang="de" aria-label="Deutsch">
+            <img class="lang-flag" src="assets/img/svg-png/flag_g.png" alt="DE">
+            <span class="lang-text" data-glitch="DE">DE</span>
+          </a>
+          <a class="lang-pill" href="/en/index.html" data-lang="en" aria-label="English">
+            <img class="lang-flag" src="assets/img/svg-png/flag_en.png" alt="EN">
+            <span class="lang-text" data-glitch="EN">EN</span>
+          </a>
+          <a class="lang-pill" href="/es/index.html" data-lang="es" aria-label="Español">
+            <img class="lang-flag" src="assets/img/svg-png/flag_es.png" alt="ES">
+            <span class="lang-text" data-glitch="ES">ES</span>
+          </a>
+        </div>
+
+        <button class="btn-cyberpunk nav__panelCta" id="btn-abrir-modal-mobile">
+          Kontakt aufnehmen
+        </button>
+      </div>
     </header>
+    <!-- FIN NAVBAR -->
 
     <!-- HERO -->
     <section class="hero" id="inicio">
@@ -669,6 +713,7 @@
   <!-- SCRIPTS -->
   
   <script type="module" src="assets/js/back.js"></script>
+  <script src="assets/js/navbar.js"></script>
   <script src="assets/js/cursor.js"></script>
   <script src="assets/js/top.js"></script>
   <script src="assets/js/img_titulo.js"></script>
