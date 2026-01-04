@@ -168,20 +168,6 @@
     .foot1, .foot2 {
         font-size: 10px;
     }
-    .btn-top{
-    --size: 52px;
-    --ring: 42px;
-
-    /* neutraliza el efecto “cambio de tamaño” */
-    transform: translateY(14px);
-    }
-    .btn-top.is-visible{
-        transform: translateY(0);
-    }
-    .btn-top:active{
-        transform: translateY(1px); /* sin scale */
-    }
-
 
 
 }

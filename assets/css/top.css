@@ -147,12 +147,45 @@
     --ring: 42px;
   }
 }
-.btn-top{
-  /* evita que el browser “recalcule” el tamaño del fixed en scroll */
-  contain: layout paint;
-  will-change: transform, opacity;
 
-  /* fuerza tamaño físico estable */
+/* ✅ Estabiliza fixed + evita “respirar” al scroll en mobile */
+.btn-top{
   inline-size: var(--size);
   block-size: var(--size);
+  contain: layout paint;
+  will-change: transform, opacity;
+  transform-origin: center;
 }
+
+/* El SVG no debe capturar tap y se renderiza estable */
+.btn-top__ring{
+  pointer-events: none;
+  width: var(--ring);
+  height: var(--ring);
+  display: block;
+}
+
+/* iOS/Android: usa safe-area para que no “salte” con la barra */
+.btn-top{
+  bottom: calc(42px + env(safe-area-inset-bottom));
+}
+
+/* 🔥 Mobile: quita scale() (causa #1 del “cambio de tamaño”) */
+@media (max-width: 520px){
+  .btn-top{
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    --size: 52px;
+    --ring: 42px;
+
+    /* sin scale para evitar el efecto “cambia de tamaño” */
+    transform: translateY(14px);
+  }
+  .btn-top.is-visible{
+    transform: translateY(0);
+  }
+  .btn-top:active{
+    transform: translateY(1px);
+  }
+}
+

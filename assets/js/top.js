@@ -37,7 +37,12 @@
   };
 
   window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
+  // iOS dispara resize al hacer scroll; mejor usar visualViewport si existe
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", onScroll, { passive: true });
+  } else {
+    window.addEventListener("resize", onScroll, { passive: true });
+  }
 
   // click to top
   btn.addEventListener("click", () => {
