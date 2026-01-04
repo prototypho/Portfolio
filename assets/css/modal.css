@@ -226,3 +226,52 @@ textarea {
 #bloque-fecha-hora {
   display: none; /* oculto por defecto */
 }
+
+/* ===== FIX MODAL MOBILE + Z-INDEX + SCROLL ===== */
+.modal-overlay{
+  z-index: 9999;                 /* más alto que nav/panel */
+  padding: 16px;                 /* aire en bordes */
+  overflow-y: auto;              /* si el modal es alto, que scrollee */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* En móviles iOS/Android: centra arriba un poco, no totalmente al medio */
+.modal-contenido{
+  margin: auto;
+  max-height: calc(100dvh - 32px); /* viewport dinámico (mejor que 100vh) */
+  overflow: auto;                  /* scroll dentro del modal si hace falta */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Si tu menú hamburguesa usa panel fixed, esto evita que se “coma” el modal */
+.nav__panel{
+  z-index: 2000;
+}
+
+/* Ajustes específicos mobile */
+@media (max-width: 540px){
+  .modal-overlay{
+    align-items: flex-start;     /* en vez de centro perfecto */
+    padding-top: 18px;
+  }
+
+  .modal-contenido{
+    border-radius: 18px;
+    padding: 1.4rem 1.1rem 1.2rem;
+    max-width: 100%;
+  }
+
+  .modal-contenido h2{
+    font-size: 1.15rem;
+    letter-spacing: 0.12em;
+    line-height: 1.1;
+  }
+
+  .modal-subtitulo{
+    font-size: 0.85rem;
+  }
+
+  textarea{
+    min-height: 95px;
+  }
+}

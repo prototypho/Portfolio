@@ -40,3 +40,41 @@
     if (window.innerWidth > 900) closeMenu();
   });
 })();
+
+(() => {
+  const modal = document.getElementById("modal-contacto");
+  if (!modal) return;
+
+  const openButtons = [
+    document.getElementById("btn-abrir-modal"),
+    document.getElementById("btn-abrir-modal-mobile"), // si existe
+  ].filter(Boolean);
+
+  const closeBtn = modal.querySelector(".modal-cerrar");
+
+  const openModal = () => {
+    modal.classList.add("activo");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("activo");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  };
+
+  openButtons.forEach(btn => btn.addEventListener("click", openModal));
+  closeBtn?.addEventListener("click", closeModal);
+
+  // Cerrar tocando fuera del contenido
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Cerrar con ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+})();
+
