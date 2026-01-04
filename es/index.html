@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JR Developer – Web & Tech</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/tecno.css" />
+    <link rel="stylesheet" href="../assets/css/proy.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/rotate_card.css" />
+    <link rel="stylesheet" href="../assets/css/img_titulo.css" />
+    <link rel="stylesheet" href="../assets/css/clientes.css" />
+    <link rel="stylesheet" href="../assets/css/modal.css" />
+    <link rel="stylesheet" href="../assets/css/social_nav.css">
+    <link rel="stylesheet" href="../assets/css/top.css">
+    <link rel="stylesheet" href="../assets/css/heroline.css">
+    <link rel="stylesheet" href="../assets/css/cursor.css">
+    <link rel="stylesheet" href="../assets/css/sub_cards.css">
+
+    <!-- Estilos para el fondo de Three.js -->
+    <style>
+        body { margin: 0; background: black; }
+        canvas {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;          /* <-- Pone el fondo detrás del contenido */
+        pointer-events: none; /* <-- El fondo no captura clicks */
+    }
+
+    </style>
+    <script type="importmap">
+    {
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.155/build/three.module.js"
+    }
+    }
+    </script>
+    <!-- FIN Estilos para el fondo de Three.js -->
+</head>
+<body>
+  <div class="page">
+    <!-- NAVBAR -->
+    <header class="nav">
+      <div class="nav__logo">
+        <img src="../assets/img/JR dev_small.png" alt="JR dev logo">
+      </div>
+
+      <nav class="nav__links">
+        <a href="#servicios" class="nav__link">Servicios</a>
+        <a href="#proyectos" class="nav__link">Proyectos</a>
+        <a href="#sobre-mi" class="nav__link">Sobre mí</a>
+      </nav>
+
+      <!-- 🔹 NUEVO: banderas horizontales -->
+      <div class="nav__lang" id="nav-lang">
+        <a class="lang-pill" href="/index.html" data-lang="de" aria-label="Deutsch">
+          <img class="lang-flag" src="../assets/img/svg-png/flag_g.png" alt="DE">
+          <span class="lang-text">DE</span>
+        </a>
+        <a class="lang-pill" href="/en/index.html" data-lang="en" aria-label="English">
+          <img class="lang-flag" src="../assets/img/svg-png/flag_en.png" alt="EN">
+          <span class="lang-text">EN</span>
+        </a>
+        <a class="lang-pill" href="#" data-lang="es" aria-label="Español">
+          <img class="lang-flag" src="../assets/img/svg-png/flag_es.png" alt="ES">
+          <span class="lang-text">ES</span>
+        </a>
+      </div>
+
+      <button id="btn-abrir-modal" class="btn-cyberpunk">
+        Solicitar llamada / consulta
+      </button>
+    </header>
+    
+    <div class="separacion" style="height: 3rem;"></div>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-left">
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          <span>Desarrollo web · APIs · SEO · Tech</span>
+        </div>
+
+        <h1 class="hero-title typewriter">
+
+          <!-- Capa que se escribe -->
+          <span class="typing-layer">
+            Diseños 
+            <span class="gold-base">100% personalizados.</span><br>
+            APIs a medida del <span class="gold-base">cliente</span>.
+          </span>
+
+          <!-- Glow independiente (NO se escribe) -->
+          <span class="glow-layer">
+            Diseños 
+            <span class="gold-glow">100% personalizados.</span><br>
+            APIs a medida del <span class="gold-glow">cliente</span>.
+          </span>
+
+          <span class="cursor"></span>
+        </h1>
+
+
+
+
+        <p class="hero-sub reveal">
+          <span>Webs ultra rápidas,</span>
+          <span>integración de APIs,</span>
+          <span>estrategias SEO medibles</span>
+          <span>y soporte técnico</span>
+          <span>en software y hardware</span>
+          <span>para que tu marca brille</span>
+          <span>como un producto premium.</span>
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn-primary">
+            Ver proyectos
+            <span>↗</span>
+          </button>
+          <button class="btn-ghost">
+            <span class="icon">◎</span>
+            Diagnóstico gratuito
+          </button>
+        </div>
+
+        <div class="hero-meta">
+          <div><strong>Optimizacion SEO</strong></div><span class="hero-card-tag-dot2"></span>/
+          <div><strong>Optimizacion Core Web </strong></div><span class="hero-card-tag-dot2"></span>/
+          <div><strong>Software · Hardware</strong></div><span class="hero-card-tag-dot2"></span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <article class="hero-card">
+          <div class="hero-card-header">
+            <span></span>
+            <span class="hero-card-tag">
+              <span class="hero-card-tag-dot"></span>
+              Desarrollo en Vivo
+            </span>
+          </div>
+
+          <div class="hero-main-image-wrap">
+            <div class="encode-card">
+              <!-- Imagen final -->
+              <img src="../assets/img/1.png" class="encode-img" alt="Imagen codificada">
+
+              <!-- Capa de código -->
+              <div class="code-overlay" id="codeOverlay"></div>
+            </div>
+          </div>
+
+          <div class="hero-chip">
+            <span class="spark">✦</span>
+            <span>Codificacion · Soporte · Diseño</span>
+          </div>
+
+          <div class="hero-status-card">
+            <div class="hero-status-label">Estado de disponibilidad actual</div>
+            <div class="hero-status-value">
+              <span></span>
+              <span class="badge">90/100</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    
+
+    <div class="separacion" style="height: 6rem;"></div>
+    <!-- TECNOLOGIAS -->
+    <section class="tech-section" id="tecnologias">
+      <h2 class="tech-title">Tecnologías que utilizo</h2>
+      <p class="tech-sub">Stack moderno para desarrollo web, backend, despliegues y optimización.</p>
+
+      <div class="tech-grid">
+
+        <div class="tech-item">
+          <div class="tech-content">
+            <img src="../assets/img/html.png" alt="HTML5">
+            <span> 
+              <h4>HTML5</h4>
+              <p>Lenguaje para crear páginas web modernas y apps web</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+            <img src="../assets/img/css.png" alt="CSS3">
+            <span>
+              <h4>CSS3</h4>
+              <p>Estilos visuales y diseño responsivo para interfaces modernas</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content"> 
+            <img src="../assets/img/js.png" alt="JavaScript">
+            <span> 
+              <h4>JavaScript</h4>
+              <p>Lenguaje para crear interacciones dinámicas en páginas web</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+            <img src="../assets/img/node.jpg" alt="Node.js">
+            <span> 
+              <h4>Node.js</h4>
+              <p>Entorno de ejecución para JavaScript en el servidor</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+            <img src="../assets/img/py.png" alt="Python">
+            <span>
+              <h4>Python</h4>
+              <p>Lenguaje para automatización, desarrollo web y análisis de datos</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+            <img src="../assets/img/react.png" alt="React">
+            <span>
+              <h4>React</h4>
+              <p>Librería para construir interfaces de usuario interactivas</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+          <img src="../assets/img/sqlite.png" alt="SQLite">
+          <span> 
+            <h4>SQLite</h4>
+            <p>Base de datos ligera y fácil de usar para aplicaciones locales.</p>
+          </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+          <img src="../assets/img/php.png" alt="PHP">
+          <span> 
+            <h4>PHP</h4>
+            <p>Lenguaje de programación para desarrollo web backend.</p>
+          </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="more-container">
+      <button class="more-btn" id="toggleMore">
+        VER MÁS
+        <span class="arrow">▸</span>
+      </button>
+
+      <div class="accordion" id="accordionMore">
+        <h3>Otras tecnologías y frameworks</h3>
+        <div class="mini-cards-grid">
+          <div class="mini-card">
+            <img src="../assets/img/docker.png" alt="Docker">
+            <div class="mini-info">
+              <h4>Docker</h4>
+              <p>Entornos aislados y despliegues portables.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/express.png" alt="Express.js">
+            <div class="mini-info">
+              <h4>Express.js</h4>
+              <p>Framework rápido y minimalista para APIs.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/mongodb.png" alt="MongoDB">
+            <div class="mini-info">
+              <h4>MongoDB</h4>
+              <p>Base de datos NoSQL flexible y escalable.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/tailwind.png" alt="TailwindCSS">
+            <div class="mini-info">
+              <h4>TailwindCSS</h4>
+              <p>Estilo rápido con utilidades modernas.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/prisma.png" alt="Prisma">
+            <div class="mini-info">
+              <h4>Prisma</h4>
+              <p>ORM moderno con tipado avanzado.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/laravel.png" alt="Laravel">
+            <div class="mini-info">
+              <h4>Laravel</h4>
+              <p>Framework elegante para backend en PHP.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/ajax.png" alt="AJAX">
+            <div class="mini-info">
+              <h4>AJAX</h4>
+              <p>Técnica para actualizar partes de una página web sin recargarla.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/bootstrap.png" alt="Bootstrap">
+            <div class="mini-info">
+              <h4>Bootstrap</h4>
+              <p>Framework CSS para diseño responsivo y componentes predefinidos.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/jquerry.png" alt="jQuery">
+            <div class="mini-info">
+              <h4>jQuery</h4>
+              <p>Biblioteca JavaScript para simplificar la manipulación del DOM.</p>
+            </div>
+          </div>
+
+        </div>
+
+        
+      </div>
+    </div>
+    <!-- FIN TECNOLOGIAS -->
+    <!-- SERVICIOS ROTATE CARDS -->
+      <div class="controls">
+        <button class="control-btn" onclick="toggleAnimation()">⏸️ Pause</button>
+        <button class="control-btn" onclick="resetPosition()">🔄 Reset</button>
+        <button class="control-btn" onclick="changeDirection()">
+          ↔️ Direction
+        </button>
+      </div>
+
+      <div class="speed-indicator">
+        Speed: <span id="speedValue">120</span> px/s
+      </div>
+      <div class="cards-conteiner" id="servicios">
+        <div class="cont_rotate">
+          <h2 class="rotate-title">SERVICIOS</h2>
+          
+          <canvas id="particleCanvas"></canvas>
+          <canvas id="scannerCanvas"></canvas>
+
+          <div class="scanner"></div>
+
+          <div class="card-stream" id="cardStream">
+            <div class="card-line" id="cardLine"></div>
+          </div>
+          <div class="drag-hint-wrapper" id="dragHintWrapper">
+            <div class="drag-hint-content">
+              <div class="drag-hand"></div>
+              <span>Arrastra para explorar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- CARDS SERVICIOS -->
+    <section class="projects-section">
+        <div class="projects-grid">
+
+            <!-- CARD 1 -->
+            <div class="project-card">
+                <div class="project-inner">
+                    
+                    <!-- Frente -->
+                    <div class="project-front">
+                    <img src="/assets/img/proyecto1.png" alt="">
+                    </div>
+
+                    <!-- Parte trasera -->
+                    <div class="project-back">
+                    <h3>¿Tu página web luce antigua o no te trae resultados?</h3>
+                    <p class="multiline">
+                        Diseño y modernizo tu sitio con animaciones profesionales, SEO avanzado y API integrada para conectar tu web con tus sistemas internos, CRM, WhatsApp y más.
+                        Convierte visitantes en clientes con una web rápida, moderna y lista para posicionar en Google.
+
+                        📈 Si tu negocio no está actualizado… tu competencia sí lo está.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="project-card">
+                <div class="project-inner">
+                    <div class="project-front">
+                    <img src="/assets/img/proyecto2.png" alt="">
+                    </div>
+                    <div class="project-back">
+                    <h3>📁 Del archivo físico al digital: digitaliza tu empresa hoy</h3>
+                    <p class="multiline">
+                        Ahorra espacio, tiempo y dinero.
+                        Transformo tus documentos físicos en un sistema 100% digital:
+                        ✔ Acceso rápido desde cualquier dispositivo
+                        ✔ Seguridad y respaldo en la nube
+                        ✔ Organización inteligente por categorías y buscador interno
+                        ✔ Flujo de trabajo sin papel
+
+                        Moderniza tu oficina y acelera tus procesos internos.
+                        💼 Ideal para despachos, hospitales, constructoras, inmobiliarias, colegios y más.</p>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="project-card">
+                <div class="project-inner">
+                    <div class="project-front">
+                    <img src="/assets/img/proyecto3.png" alt="Proyecto 3">
+                    </div>
+                    <div class="project-back">
+                    <h3>✨ ¿Tu marca se ve antigua? Renueva tu imagen y vuelve a impactar</h3>
+                    <p class="multiline">Un logotipo es la primera impresión de tu negocio.
+                    Creo y modernizo tu identidad visual para que tu empresa:
+                    🔥 Se vea profesional
+                    📌 Sea memorable
+                    📱 Funcione en web, móvil y redes
+                    🎯 Atraiga a un público más moderno
+
+                    Incluye: rediseño del logo, paleta de colores, tipografías, tarjetas, banners, plantillas para redes y más.</p>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </section>   
+  </div>
+
+  
+
+  <!-- PROYECTOS DE CLIENTES -->
+  <section class="testimonios-cyberpunk" id="proyectos">
+  <div class="testimonios-grid">
+
+    <!-- SUB-CARDS -->
+    <section class="section" >
+      <div class="section-header">
+        <p class="section-sub hero-line" data-build>
+          Construyo experiencias digitales que combinan rendimiento técnico,
+          diseño atrevido y una base sólida para el posicionamiento orgánico.
+        </p>
+      </div>
+
+      <div class="services-grid" data-stagger="services">
+        <article class="service-card" data-stagger-item>
+          
+          <div>
+            <div class="service-label">Web & UI</div>
+            <h3 class="service-title">Sitios web de alto impacto</h3>
+            <p class="service-desc">
+              Landing pages, webs corporativas y portafolios con animaciones suaves,
+              microinteracciones y performance de nivel producto.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span>Next.js · SPA · SSR</span>
+            <span class="badge">web dev</span>
+          </div>
+        </article>
+
+        <article class="service-card" data-stagger-item>
+          
+          <div>
+            <div class="service-label">APIs & Integraciones</div>
+            <h3 class="service-title">Arquitecturas conectadas</h3>
+            <p class="service-desc">
+              Diseño y consumo de APIs REST/GraphQL, automatizaciones y
+              backends listos para escalar con seguridad y buenas prácticas.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span>Node · REST · GraphQL</span>
+            <span class="badge">apis</span>
+          </div>
+        </article>
+
+        <article class="service-card" data-stagger-item>
+          
+          <div>
+            <div class="service-label">SEO & Tech</div>
+            <h3 class="service-title">SEO técnico & soporte</h3>
+            <p class="service-desc">
+              Auditorías técnicas, optimización de tiempos de carga,
+              schema, accesibilidad y soporte en hardware/software.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span>Lighthouse · Core Web Vitals</span>
+            <span class="badge">seo + tech</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <h2 class="projects-title">Proyectos</h2>
+      <p class="projects-sub">Una selección de trabajos y comentarios desarrollados recientemente.</p>
+    <!-- Testimonio 1 -->
+    <article class="testimonio-card">
+      <img src="/assets/img/back_cliente1.png" alt="Logo cliente" class="logo-testimonio">
+      <h3>Jonathan Agneessens Immobilien</h3>
+      <p class="testimonio-texto">
+        “Recomiendo ampliamente a Jonathan Rodríguez. Es un gran profesional que nos creó un nuevo sitio web que encaja a la perfección con nuestra visión: ¡moderno y de vanguardia! Siempre es accesible y atiende todas las necesidades del cliente. Aquí, no eres solo un número, el cliente es el rey. Jonathan Rodríguez de JR Developer también es la persona ideal para el soporte posventa y, muy importante, ¡para la optimización en buscadores!”
+      </p>
+      <p class="testimonio-cliente">– Jonathan Agneessens-</p>
+      <a href="https://www.ja-immo-eifel.de/" target="_blank" class="btn-enlace">
+        Visitar su web
+      </a>
+    </article>
+  </div>
+</section>
+
+<div class="separacion" style="height: 40rem;" id="sobre-mi"></div>
+
+  <!-- FOOTER -->
+  <footer id="footerReveal">
+    <!-- SOBRE MI -->
+      <section class="about-section">
+        <h2 class="about-title">Sobre mí</h2>
+
+        <div class="about-wrapper">
+
+          <!-- FOTO CON PARALLAX -->
+          <div class="about-photo" data-parallax>
+            <img src="../assets/img/yo.png" alt="Foto programando">
+          </div>
+
+          <!-- TEXTO -->
+          <div class="about-text">
+            <h3>Hola, soy <span class="golden">Jonathan Rodriguez</span></h3>
+            <p>
+              Desarrollador web full-stack especializado en interfaces modernas, 
+              APIs rápidas y optimización técnica. Combino diseño elegante con 
+              rendimiento profesional para crear proyectos que transmiten calidad, 
+              precisión y una identidad digital sólida.
+            </p>
+          </div>
+        </div> 
+      </section>
+      <!-- FIN SOBRE MI -->
+      <div class="foot">
+        <div class="foot1">© <strong>Jonathan Rodriguez - JR Developer - Sarresdorfer Str. 51 - Gerolstein - Alemania </strong></div>
+        <div class="foot2">Disponible para proyectos seleccionados · Escríbeme en ✉ <a href="mailto:jdejonathan.es@gmail.com">jdejonathan.es@gmail.com</a></div>
+      </div>
+      
+  </footer>
+
+  <!-- Modal -->
+    <div id="modal-contacto" class="modal-overlay" aria-hidden="true">
+      <div class="modal-contenido">
+        <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+
+        <h2>Agendar una llamada o envíame un email</h2>
+        <p class="modal-subtitulo">
+          Déjame tus datos y coordinamos una llamada o te respondo por email.
+        </p>
+
+        <form id="form-contacto" class="form-cyberpunk">
+          <!-- Datos básicos -->
+          <div class="grupo-campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="grupo-campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="grupo-campo">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" id="telefono" name="telefono" />
+          </div>
+
+          <!-- Preferencia de contacto -->
+          <fieldset class="grupo-campo grupo-opciones">
+            <legend>¿Cómo prefieres que te contacte?</legend>
+            <label>
+              <input type="radio" name="preferencia_contacto" value="telefono" checked />
+              Llamada telefónica
+            </label>
+            <!-- Fecha y hora deseadas para llamada -->
+          <div class="grupo-campo-doble" id="bloque-fecha-hora">
+            <div class="grupo-campo">
+              <label for="fecha">Fecha deseada</label>
+              <input type="date" id="fecha" name="fecha" />
+            </div>
+            <div class="grupo-campo">
+              <label for="hora">Horario deseado</label>
+              <input type="time" id="hora" name="hora" />
+            </div>
+          </div>
+            <label>
+              <input type="radio" name="preferencia_contacto" value="email" />
+              Email
+            </label>
+          </fieldset>
+
+          <!-- Mensaje / consulta -->
+          <div class="grupo-campo">
+            <label for="mensaje">Consulta / Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+
+          <!-- Botones -->
+            <button type="submit" class="btn-cyberpunk">
+              Enviar solicitud
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <button id="btn-top" class="btn-top" aria-label="Volver arriba" title="Top">
+      <svg class="btn-top__ring" viewBox="0 0 44 44" aria-hidden="true">
+        <circle class="btn-top__ring-bg" cx="22" cy="22" r="18"></circle>
+        <circle class="btn-top__ring-progress" cx="22" cy="22" r="18"></circle>
+      </svg>
+
+      <span class="btn-top__content">
+        <span class="btn-top__icon">↑</span>
+        <span class="btn-top__text">TOP</span>
+      </span>
+    </button>
+
+
+
+
+  
+  <!-- SCRIPTS -->
+  <script src="../assets/js/cursor.js"></script>
+  <script type="module" src="../assets/js/back.js"></script>
+  <script src="../assets/js/top.js"></script>
+  <script src="../assets/js/img_titulo.js"></script>
+  <script src="../assets/js/heroline.js"></script>
+  <script src="../assets/js/sub_cards.js"></script>
+  <script src="assets/js/tecno.js"></script>
+  <script src="../assets/js/proy.js"></script>
+  <script src="../assets/js/footer.js"></script>
+  <script src="assets/js/rotate_card.js"></script>
+  <script src="../assets/js/modal.js"></script>
+</body>
+</html>

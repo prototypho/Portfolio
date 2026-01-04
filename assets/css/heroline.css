@@ -1,0 +1,74 @@
+/* Texto base */
+.hero-line{
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.55;
+  color: rgba(255,255,255,.92);
+  max-width: 64ch;
+}
+
+/* Contenedor que el JS llena con "piezas" */
+.hero-line.is-built{
+  position: relative;
+}
+
+/* Layer con piezas */
+.hero-line .piece{
+  display: inline-block;
+  position: relative;
+  opacity: 0;
+  transform: translate(var(--tx,0), var(--ty,0)) rotate(var(--rot,0deg)) scale(.98);
+  filter: blur(2px);
+  transition:
+    opacity .55s ease,
+    transform .70s cubic-bezier(.2,.9,.2,1),
+    filter .55s ease;
+  will-change: transform, opacity, filter;
+}
+
+/* Cuando se activa */
+.hero-line.is-animating .piece{
+  opacity: 1;
+  transform: translate(0,0) rotate(0deg) scale(1);
+  filter: blur(0);
+}
+
+/* Máscara tipo “bloque” (revela por rectángulos) */
+.hero-line .piece > span{
+  display: inline-block;
+  padding: .08em .08em; /* micro espacio para que se sienta "bloque" */
+  border-radius: 6px;
+
+  /* el truco: clip-path para que parezca que se arma en piezas */
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: clip-path .65s cubic-bezier(.2,.9,.2,1);
+}
+
+/* Se revela al activar */
+.hero-line.is-animating .piece > span{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Glow cyberpunk MUY sutil (no exagerado) */
+.hero-line .piece > span{
+  background: rgba(7,7,14,.0);
+  box-shadow: 0 0 0 rgba(0,255,255,0);
+}
+
+.hero-line.is-animating .piece:nth-child(6n) > span{
+  text-shadow: 0 0 18px rgba(0,255,255,.08);
+}
+.hero-line.is-animating .piece:nth-child(6n+3) > span{
+  text-shadow: 0 0 18px rgba(255,0,200,.07);
+}
+
+/* Accesibilidad: si el usuario prefiere menos animación */
+@media (prefers-reduced-motion: reduce){
+  .hero-line .piece,
+  .hero-line .piece > span{
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
+}

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JR Developer – Web & Tech</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/tecno.css" />
+    <link rel="stylesheet" href="../assets/css/proy.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/rotate_card.css" />
+    <link rel="stylesheet" href="../assets/css/img_titulo.css" />
+    <link rel="stylesheet" href="../assets/css/clientes.css" />
+    <link rel="stylesheet" href="../assets/css/modal.css" />
+    <link rel="stylesheet" href="../assets/css/social_nav.css">
+    <link rel="stylesheet" href="../assets/css/top.css">
+    <link rel="stylesheet" href="../assets/css/heroline.css">
+    <link rel="stylesheet" href="../assets/css/cursor.css">
+    <link rel="stylesheet" href="../assets/css/sub_cards.css">
+
+    <!-- Estilos para el fondo de Three.js -->
+    <style>
+        body { margin: 0; background: black; }
+        canvas {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;          /* <-- Pone el fondo detrás del contenido */
+        pointer-events: none; /* <-- El fondo no captura clicks */
+    }
+
+    </style>
+    <script type="importmap">
+    {
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.155/build/three.module.js"
+    }
+    }
+    </script>
+    <!-- FIN Estilos para el fondo de Three.js -->
+</head>
+<body>
+  <div class="page">
+    <!-- NAVBAR -->
+    <header class="nav">
+      <div class="nav__logo">
+        <img src="../assets/img/JR dev_small.png" alt="JR dev logo">
+      </div>
+
+      <nav class="nav__links">
+        <a href="#servicios" class="nav__link">Services</a>
+        <a href="#proyectos" class="nav__link">Projects</a>
+        <a href="#sobre-mi" class="nav__link">About me</a>
+      </nav>
+
+      <!-- 🔹 NUEVO: banderas horizontales -->
+      <div class="nav__lang" id="nav-lang">
+        <a class="lang-pill" href="/index.html" data-lang="de" aria-label="Deutsch">
+          <img class="lang-flag" src="../assets/img/svg-png/flag_g.png" alt="DE">
+          <span class="lang-text">DE</span>
+        </a>
+        <a class="lang-pill" href="#" data-lang="en" aria-label="English">
+          <img class="lang-flag" src="../assets/img/svg-png/flag_en.png" alt="EN">
+          <span class="lang-text">EN</span>
+        </a>
+        <a class="lang-pill" href="/es/index.html" data-lang="es" aria-label="Español">
+          <img class="lang-flag" src="../assets/img/svg-png/flag_es.png" alt="ES">
+          <span class="lang-text">ES</span>
+        </a>
+      </div>
+
+      <button id="btn-abrir-modal" class="btn-cyberpunk">
+        Make contact
+      </button>
+    </header>
+    
+    <div class="separacion" style="height: 3rem;"></div>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-left">
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          <span>Web development · APIs · SEO · Tech</span>
+        </div>
+
+        <h1 class="hero-title typewriter">
+
+          <!-- Capa que se escribe -->
+          <span class="typing-layer">
+            Designs
+            <span class="gold-base">100% personalizated.</span><br>
+            Custom APIs for the <span class="gold-base">client</span>.
+          </span>
+
+          <!-- Glow independiente (NO se escribe) -->
+          <span class="glow-layer">
+            Designs
+            <span class="gold-glow">100% personalizated.</span><br>
+            Custom APIs for the  <span class="gold-glow">client</span>.
+          </span>
+
+          <span class="cursor"></span>
+        </h1>
+
+
+
+
+        <p class="hero-sub reveal">
+          <span>Ultra-fast websites,</span>
+          <span>API integration,</span>
+          <span>measurable SEO strategies</span>
+          <span>and technical support</span>
+          <span>in software and hardware</span>
+          <span>for your brand to shine</span>
+          <span>like a premium product.</span>
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn-primary">
+            See projects
+            <span>↗</span>
+          </button>
+          <button class="btn-ghost">
+            <span class="icon">◎</span>
+            Free diagnosis
+          </button>
+        </div>
+
+        <div class="hero-meta">
+          <div><strong>SEO Optimization</strong></div><span class="hero-card-tag-dot2"></span>/
+          <div><strong>Core Web Vitals</strong></div><span class="hero-card-tag-dot2"></span>/
+          <div><strong>Support</strong> IT </div><span class="hero-card-tag-dot2"></span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <article class="hero-card">
+          <div class="hero-card-header">
+            <span></span>
+            <span class="hero-card-tag">
+              <span class="hero-card-tag-dot"></span>
+              Live Development
+            </span>
+          </div>
+
+          <div class="hero-main-image-wrap">
+            <div class="encode-card">
+              <!-- Imagen final -->
+              <img src="../assets/img/1.png" class="encode-img" alt="Imagen codificada">
+
+              <!-- Capa de código -->
+              <div class="code-overlay" id="codeOverlay"></div>
+            </div>
+          </div>
+
+          <div class="hero-chip">
+            <span class="spark">✦</span>
+            <span>Codification · Support · Design</span>
+          </div>
+
+          <div class="hero-status-card">
+            <div class="hero-status-label">Current availability status</div>
+            <div class="hero-status-value">
+              <span></span>
+              <span class="badge">90/100</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    
+
+    <div class="separacion" style="height: 6rem;"></div>
+    <!-- TECNOLOGIAS -->
+    <section class="tech-section" id="tecnologias">
+      <h2 class="tech-title">Technologies I use</h2>
+      <p class="tech-sub">Modern stack for web development, backend, deployment and optimization.</p>
+
+      <div class="tech-grid">
+
+        <div class="tech-item">
+          <div class="tech-content">
+            <img src="../assets/img/html.png" alt="HTML5">
+            <span> 
+              <h4>HTML5</h4>
+              <p>Language for creating modern web pages and web apps</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+            <img src="../assets/img/css.png" alt="CSS3">
+            <span>
+              <h4>CSS3</h4>
+              <p>Visual styles and responsive design for modern interfaces</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content"> 
+            <img src="../assets/img/js.png" alt="JavaScript">
+            <span> 
+              <h4>JavaScript</h4>
+              <p>Language for creating dynamic interactions on web pages</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+            <img src="../assets/img/node.jpg" alt="Node.js">
+            <span> 
+              <h4>Node.js</h4>
+              <p>Runtime environment for JavaScript on the server</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+            <img src="../assets/img/py.png" alt="Python">
+            <span>
+              <h4>Python</h4>
+              <p>Language for automation, web development and data analysis</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+            <img src="../assets/img/react.png" alt="React">
+            <span>
+              <h4>React</h4>
+              <p>Library for building interactive user interfaces</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+          <img src="../assets/img/sqlite.png" alt="SQLite">
+          <span> 
+            <h4>SQLite</h4>
+            <p>Lightweight and easy-to-use database for local applications.</p>
+          </span>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-content">
+          <img src="../assets/img/php.png" alt="PHP">
+          <span> 
+            <h4>PHP</h4>
+            <p>Language for backend web development.</p>
+          </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="more-container">
+      <button class="more-btn" id="toggleMore">
+        VIEW MORE
+        <span class="arrow">▸</span>
+      </button>
+
+      <div class="accordion" id="accordionMore">
+        <h3>Other technologies and frameworks</h3>
+        <div class="mini-cards-grid">
+          <div class="mini-card">
+            <img src="../assets/img/docker.png" alt="Docker">
+            <div class="mini-info">
+              <h4>Docker</h4>
+              <p>Isolated environments and portable deployments.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/express.png" alt="Express.js">
+            <div class="mini-info">
+              <h4>Express.js</h4>
+              <p>Fast and minimalist framework for APIs.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/mongodb.png" alt="MongoDB">
+            <div class="mini-info">
+              <h4>MongoDB</h4>
+              <p>Flexible and scalable NoSQL database.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/tailwind.png" alt="TailwindCSS">
+            <div class="mini-info">
+              <h4>TailwindCSS</h4>
+              <p>Fast styling with modern utilities.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/prisma.png" alt="Prisma">
+            <div class="mini-info">
+              <h4>Prisma</h4>
+              <p>Modern ORM with advanced typing.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/laravel.png" alt="Laravel">
+            <div class="mini-info">
+              <h4>Laravel</h4>
+              <p>Elegant framework for PHP backend development.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/ajax.png" alt="AJAX">
+            <div class="mini-info">
+              <h4>AJAX</h4>
+              <p>Technique for updating parts of a web page without reloading it.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/bootstrap.png" alt="Bootstrap">
+            <div class="mini-info">
+              <h4>Bootstrap</h4>
+              <p>Framework CSS for responsive design and predefined components.</p>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <img src="../assets/img/jquerry.png" alt="jQuery">
+            <div class="mini-info">
+              <h4>jQuery</h4>
+              <p>JavaScript library for simplifying DOM manipulation.</p>
+            </div>
+          </div>
+
+        </div>
+
+        
+      </div>
+    </div>
+    <!-- FIN TECNOLOGIAS -->
+    <!-- SERVICIOS ROTATE CARDS -->
+      <div class="controls">
+        <button class="control-btn" onclick="toggleAnimation()">⏸️ Pause</button>
+        <button class="control-btn" onclick="resetPosition()">🔄 Reset</button>
+        <button class="control-btn" onclick="changeDirection()">
+          ↔️ Direction
+        </button>
+      </div>
+
+      <div class="speed-indicator">
+        Speed: <span id="speedValue">120</span> px/s
+      </div>
+      <div class="cards-conteiner" id="servicios">
+        <div class="cont_rotate">
+          <h2 class="rotate-title">SERVICES</h2>
+          
+          <canvas id="particleCanvas"></canvas>
+          <canvas id="scannerCanvas"></canvas>
+
+          <div class="scanner"></div>
+
+          <div class="card-stream" id="cardStream">
+            <div class="card-line" id="cardLine"></div>
+          </div>
+          <div class="drag-hint-wrapper" id="dragHintWrapper">
+            <div class="drag-hint-content">
+              <div class="drag-hand"></div>
+              <span>Drag to explore</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- CARDS SERVICIOS -->
+    <section class="projects-section">
+        <div class="projects-grid">
+
+            <!-- CARD 1 -->
+            <div class="project-card">
+                <div class="project-inner">
+                    
+                    <!-- Frente -->
+                    <div class="project-front">
+                    <img src="/assets/img/proyecto1.png" alt="">
+                    </div>
+
+                    <!-- Parte trasera -->
+                    <div class="project-back">
+                    <h3>Does your website look outdated or fail to deliver results?</h3>
+                    <p class="multiline">
+                        I design and modernize your website with professional animations, advanced SEO, and an integrated API to connect your site with your internal systems, CRM, WhatsApp, and more.
+                        Convert visitors into customers with a fast, modern website ready to rank on Google.
+
+                        📈 If your business isn't up-to-date... your competition is.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="project-card">
+                <div class="project-inner">
+                    <div class="project-front">
+                    <img src="/assets/img/proyecto2.png" alt="">
+                    </div>
+                    <div class="project-back">
+                    <h3>📁 From physical to digital archives: digitize your business today</h3>
+                    <p class="multiline">
+                        Save space, time, and money.
+                        I transform your physical documents into a 100% digital system.
+                        ✔ Quick access from any device
+                        ✔ Cloud security and backup
+                        ✔ Smart organization by category and built-in search
+                        ✔ Paperless workflow
+
+                        Modernize your office and accelerate your internal processes.
+                        💼 Ideal for law firms, hospitals, construction companies, real estate agencies, schools and more.</p>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="project-card">
+                <div class="project-inner">
+                    <div class="project-front">
+                    <img src="/assets/img/proyecto3.png" alt="Proyecto 3">
+                    </div>
+                    <div class="project-back">
+                    <h3>✨ Does your brand look outdated? Refresh your image and make an impact again.</h3>
+                    <p class="multiline">A logo is the first impression of your business.
+                    I create and modernize your visual identity so your company:
+                    🔥 Looks professional
+                    📌 Is memorable
+                    📱 Works on web, mobile and social media
+                    🎯 Atraiga a un público más moderno
+
+                    Includes: logo redesign, color palette, fonts, business cards, banners, social media templates, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </section>   
+  </div>
+
+  
+
+  <!-- PROYECTOS DE CLIENTES -->
+  <section class="testimonios-cyberpunk" id="proyectos">
+  <div class="testimonios-grid">
+
+    <!-- SUB-CARDS -->
+    <section class="section" >
+      <div class="section-header">
+        <p class="section-sub hero-line" data-build>
+          I build digital experiences that combine technical performance, bold design, and a solid foundation for organic positioning.
+        </p>
+      </div>
+
+      <div class="services-grid" data-stagger="services">
+        <article class="service-card" data-stagger-item>
+          
+          <div>
+            <div class="service-label">Web & UI</div>
+            <h3 class="service-title">High impact websites</h3>
+            <p class="service-desc">
+              Landing pages, corporate websites and portfolios with smooth animations,
+              microinteractions and product-level performance.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span>Next.js · SPA · SSR</span>
+            <span class="badge">web dev</span>
+          </div>
+        </article>
+
+        <article class="service-card" data-stagger-item>
+          
+          <div>
+            <div class="service-label">APIs & Integraciones</div>
+            <h3 class="service-title">Connected Architectures</h3>
+            <p class="service-desc">
+              Design and consumption of REST/GraphQL APIs, automations and
+              backends ready to scale with security and best practices.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span>Node · REST · GraphQL</span>
+            <span class="badge">apis</span>
+          </div>
+        </article>
+
+        <article class="service-card" data-stagger-item>
+          
+          <div>
+            <div class="service-label">SEO & Tech</div>
+            <h3 class="service-title">Technical SEO & Support</h3>
+            <p class="service-desc">
+              Technical audits, optimization of loading times,
+              schema, accessibility and support in hardware/software.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span>Lighthouse · Core Web Vitals</span>
+            <span class="badge">seo + tech</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <h2 class="projects-title">Projects</h2>
+      <p class="projects-sub">A selection of recent work and testimonials.</p>
+    <!-- Testimonio 1 -->
+    <article class="testimonio-card">
+      <img src="/assets/img/back_cliente1.png" alt="Logo cliente" class="logo-testimonio">
+      <h3>Jonathan Agneessens Immobilien</h3>
+      <p class="testimonio-texto">
+        “I can highly recommend Jonathan Rodriguez. He's an absolute professional who built us a new website that perfectly matches our vision: modern and truly state-of-the-art! He's always approachable and caters to all of the client's needs. Here, you're not just a number; the customer is truly king. Jonathan Rodriguez from JR Developer is also the right person for after-sales support and, very importantly, search engine optimization!”
+      </p>
+      <p class="testimonio-cliente">– Jonathan Agneessens-</p>
+      <a href="https://www.ja-immo-eifel.de/" target="_blank" class="btn-enlace">
+        Visit website
+      </a>
+    </article>
+  </div>
+</section>
+
+<div class="separacion" style="height: 40rem;" id="sobre-mi"></div>
+
+  <!-- FOOTER -->
+  <footer id="footerReveal">
+    <!-- SOBRE MI -->
+      <section class="about-section">
+        <h2 class="about-title">About me</h2>
+
+        <div class="about-wrapper">
+
+          <!-- FOTO CON PARALLAX -->
+          <div class="about-photo" data-parallax>
+            <img src="../assets/img/yo.png" alt="Foto programando">
+          </div>
+
+          <!-- TEXTO -->
+          <div class="about-text">
+            <h3>Hello, I am <span class="golden">Jonathan Rodriguez</span></h3>
+            <p>
+              Full-stack web developer specializing in modern interfaces, fast APIs, and technical optimization. I combine elegant design with professional performance to create projects that convey quality, precision, and a strong digital identity.
+            </p>
+          </div>
+        </div> 
+      </section>
+      <!-- FIN SOBRE MI -->
+      <div class="foot">
+        <div class="foot1">© <strong>Jonathan Rodriguez - JR Developer - Sarresdorfer Str. 51 - Gerolstein - Germany </strong></div>
+        <div class="foot2">Available for selected projects · Write to me at ✉ <a href="mailto:jdejonathan.es@gmail.com">jdejonathan.es@gmail.com</a></div>
+      </div>
+      
+  </footer>
+
+  <!-- Modal -->
+    <div id="modal-contacto" class="modal-overlay" aria-hidden="true">
+      <div class="modal-contenido">
+        <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+
+        <h2>Schedule a call or send an email</h2>
+        <p class="modal-subtitulo">
+          Leave me your details and we'll arrange a call or I'll reply by email.
+        </p>
+
+        <form id="form-contacto" class="form-cyberpunk">
+          <!-- Datos básicos -->
+          <div class="grupo-campo">
+            <label for="nombre">First and last name</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="grupo-campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="grupo-campo">
+            <label for="telefono">Phone (optional)</label>
+            <input type="tel" id="telefono" name="telefono" />
+          </div>
+
+          <!-- Preferencia de contacto -->
+          <fieldset class="grupo-campo grupo-opciones">
+            <legend>How would you prefer me to contact you?</legend>
+            <label>
+              <input type="radio" name="preferencia_contacto" value="telefono" checked />
+              Phone call
+            </label>
+            <!-- Fecha y hora deseadas para llamada -->
+          <div class="grupo-campo-doble" id="bloque-fecha-hora">
+            <div class="grupo-campo">
+              <label for="fecha">Desired date</label>
+              <input type="date" id="fecha" name="fecha" />
+            </div>
+            <div class="grupo-campo">
+              <label for="hora">Desired schedule</label>
+              <input type="time" id="hora" name="hora" />
+            </div>
+          </div>
+            <label>
+              <input type="radio" name="preferencia_contacto" value="email" />
+              Email
+            </label>
+          </fieldset>
+
+          <!-- Mensaje / consulta -->
+          <div class="grupo-campo">
+            <label for="mensaje">Query / Message</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+
+          <!-- Botones -->
+            <button type="submit" class="btn-cyberpunk">
+              Send request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <button id="btn-top" class="btn-top" aria-label="Volver arriba" title="Top">
+      <svg class="btn-top__ring" viewBox="0 0 44 44" aria-hidden="true">
+        <circle class="btn-top__ring-bg" cx="22" cy="22" r="18"></circle>
+        <circle class="btn-top__ring-progress" cx="22" cy="22" r="18"></circle>
+      </svg>
+
+      <span class="btn-top__content">
+        <span class="btn-top__icon">↑</span>
+        <span class="btn-top__text">TOP</span>
+      </span>
+    </button>
+
+
+
+
+  
+  <!-- SCRIPTS -->
+  <script src="../assets/js/cursor.js"></script>
+  <script type="module" src="../assets/js/back.js"></script>
+  <script src="../assets/js/top.js"></script>
+  <script src="../assets/js/img_titulo.js"></script>
+  <script src="../assets/js/heroline.js"></script>
+  <script src="../assets/js/sub_cards.js"></script>
+  <script src="assets/js/tecno.js"></script>
+  <script src="../assets/js/proy.js"></script>
+  <script src="../assets/js/footer.js"></script>
+  <script src="assets/js/rotate_card.js"></script>
+  <script src="../assets/js/modal.js"></script>
+</body>
+</html>
