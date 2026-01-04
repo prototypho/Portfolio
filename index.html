@@ -582,11 +582,16 @@
         </p>
 
         <form id="form-contacto"
-  class="form-cyberpunk"
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field">
+        class="form-cyberpunk"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field">
+
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
           <!-- Datos básicos -->
           <div class="grupo-campo">
             <label for="nombre">Name und Nachname</label>
