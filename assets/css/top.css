@@ -147,3 +147,12 @@
     --ring: 42px;
   }
 }
+.btn-top{
+  /* evita que el browser “recalcule” el tamaño del fixed en scroll */
+  contain: layout paint;
+  will-change: transform, opacity;
+
+  /* fuerza tamaño físico estable */
+  inline-size: var(--size);
+  block-size: var(--size);
+}
