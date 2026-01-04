@@ -587,7 +587,17 @@
           Déjame tus datos y coordinamos una llamada o te respondo por email.
         </p>
 
-        <form id="form-contacto" class="form-cyberpunk">
+        <form class="form-cyberpunk"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field">
+
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+
           <!-- Datos básicos -->
           <div class="grupo-campo">
             <label for="nombre">Nombre</label>
