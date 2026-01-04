@@ -168,6 +168,17 @@
     .foot1, .foot2 {
         font-size: 10px;
     }
+    .btn-top{
+        --size: 64px;
+        --ring: 54px;
+
+        position: fixed;
+        right: 28px;
+        bottom: 62px;
+
+        width: var(--size);
+        height: var(--size);
+    }
 
 
 
