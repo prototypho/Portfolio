@@ -171,16 +171,10 @@
     .separacion1 {
         height: 1rem;
     }
-    .btn-top__ring-progress{
-        filter: none;                 /* 👈 clave */
-        transition: none;             /* evita micro interpolaciones raras */
-        shape-rendering: geometricPrecision;
-        vector-effect: non-scaling-stroke; /* mantiene grosor consistente */
+    .btn-top__ring{
+        display: none;
     }
 
-    .btn-top__ring-bg{
-        vector-effect: non-scaling-stroke;
-    }
 
 
 }
