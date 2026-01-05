@@ -179,6 +179,15 @@
         position: absolute;
         bottom: 100%;
     }
+    .btn-top{
+        bottom: 72px;
+
+    }
+    .social-dock{
+        bottom: 20% !important;
+
+    }
+
     
 
 
