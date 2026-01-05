@@ -197,16 +197,3 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* Mobile: elimina drop-shadow del stroke (principal causa de “temblor”) */
-@media (max-width: 520px){
-  .btn-top__ring-progress{
-    filter: none;                 /* 👈 clave */
-    transition: none;             /* evita micro interpolaciones raras */
-    shape-rendering: geometricPrecision;
-    vector-effect: non-scaling-stroke; /* mantiene grosor consistente */
-  }
-
-  .btn-top__ring-bg{
-    vector-effect: non-scaling-stroke;
-  }
-}
