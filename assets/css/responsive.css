@@ -168,6 +168,9 @@
     .foot1, .foot2 {
         font-size: 10px;
     }
+    .separacion1 {
+        height: 1rem;
+    }
 
 
 }

@@ -37,9 +37,9 @@ revealItems.forEach((item, i) => {
     if (isOpen) {
       // auto contenido (sin cortes)
       acc.style.maxHeight = acc.scrollHeight + 200 + "px";
-      btn.innerHTML = 'SEE LESS <span class="arrow">▸</span>';
+      btn.innerHTML = 'SHOW LESS <span class="arrow">▸</span>';
     } else {
       acc.style.maxHeight = 0;
-      btn.innerHTML = 'SEE MORE  <span class="arrow">▸</span>';
+      btn.innerHTML = 'SHOW MORE  <span class="arrow">▸</span>';
     }
   });

@@ -224,7 +224,7 @@
 
     
 
-    <div class="separacion" style="height: 6rem;"></div>
+    <div class="separacion1"></div>
     <!-- TECNOLOGIAS -->
     <section class="tech-section" id="tecnologias">
       <h2 class="tech-title">Technologien, die ich verwende</h2>
@@ -706,6 +706,21 @@
       </span>
     </button>
 
+    <!-- Cookie Banner (compact) -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie banner" hidden>
+      <div class="cookie-banner__inner">
+        <p class="cookie-banner__text">
+          Wir verwenden Cookies, um Ihr Nutzererlebnis zu verbessern. Sie können diese akzeptieren oder ablehnen.
+          <a class="cookie-banner__link" href="/privacy.html">Siehe Richtlinie</a>
+        </p>
+
+        <div class="cookie-banner__actions">
+          <button class="cookie-btn cookie-btn--ghost" id="cookieReject" type="button">Stornieren</button>
+          <button class="cookie-btn cookie-btn--primary" id="cookieAccept" type="button">Akzeptieren</button>
+        </div>
+      </div>
+    </div>
+
 
 
 
@@ -713,6 +728,7 @@
   <!-- SCRIPTS -->
   
   <script type="module" src="assets/js/back.js"></script>
+  <script src="assets/js/cookies.js"></script>
   <script src="assets/js/navbar.js"></script>
   <script src="assets/js/cursor.js"></script>
   <script src="assets/js/top.js"></script>

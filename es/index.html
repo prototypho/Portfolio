@@ -58,34 +58,75 @@
         <img src="../assets/img/JR dev_small.png" alt="JR dev logo">
       </div>
 
-      <nav class="nav__links">
-        <a href="#servicios" class="nav__link">Servicios</a>
-        <a href="#proyectos" class="nav__link">Proyectos</a>
-        <a href="#sobre-mi" class="nav__link">Sobre mí</a>
-      </nav>
+      <!-- Todo lo que va a la derecha -->
+      <div class="nav__right">
+        <nav class="nav__links" id="nav-links">
+          <a href="#servicios" class="nav__link">Servicios</a>
+          <a href="#proyectos" class="nav__link">Proyectos</a>
+          <a href="#sobre-mi" class="nav__link">Sobre mí</a>
+        </nav>
 
-      <!-- 🔹 NUEVO: banderas horizontales -->
-      <div class="nav__lang" id="nav-lang">
-        <a class="lang-pill" href="/index.html" data-lang="de" aria-label="Deutsch">
-          <img class="lang-flag" src="../assets/img/svg-png/flag_g.png" alt="DE">
-          <span class="lang-text">DE</span>
-        </a>
-        <a class="lang-pill" href="/en/index.html" data-lang="en" aria-label="English">
-          <img class="lang-flag" src="../assets/img/svg-png/flag_en.png" alt="EN">
-          <span class="lang-text">EN</span>
-        </a>
-        <a class="lang-pill" href="#" data-lang="es" aria-label="Español">
-          <img class="lang-flag" src="../assets/img/svg-png/flag_es.png" alt="ES">
-          <span class="lang-text">ES</span>
-        </a>
+        <div class="nav__lang" id="nav-lang">
+          <a class="lang-pill" href="/index.html" data-lang="de" aria-label="Deutsch">
+            <img class="lang-flag" src="../assets/img/svg-png/flag_g.png" alt="DE">
+            <span class="lang-text" data-glitch="DE">DE</span>
+          </a>
+          <a class="lang-pill" href="/en/index.html" data-lang="en" aria-label="English">
+            <img class="lang-flag" src="../assets/img/svg-png/flag_en.png" alt="EN">
+            <span class="lang-text" data-glitch="EN">EN</span>
+          </a>
+          <a class="lang-pill" href="#" data-lang="es" aria-label="Español">
+            <img class="lang-flag" src="../assets/img/svg-png/flag_es.png" alt="ES">
+            <span class="lang-text" data-glitch="ES">ES</span>
+          </a>
+        </div>
+
+        <button id="btn-abrir-modal" class="btn-cyberpunk nav__ctaBtn">
+          Kontakt aufnehmen
+        </button>
+
+        <!-- Hamburguesa (solo visible en mobile) -->
+        <button class="nav__toggle"
+                id="nav-toggle"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="nav-panel">
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+        </button>
       </div>
 
-      <button id="btn-abrir-modal" class="btn-cyberpunk">
-        Solicitar llamada / consulta
-      </button>
+      <!-- Panel mobile (clonado/mostrado) -->
+      <div class="nav__panel" id="nav-panel" hidden>
+        <nav class="nav__panelLinks">
+          <a href="#servicios" class="nav__panelLink">Servicios</a>
+          <a href="#proyectos" class="nav__panelLink">Proyectos</a>
+          <a href="#sobre-mi" class="nav__panelLink">Sobre mí</a>
+        </nav>
+
+        <div class="nav__panelLang">
+          <!-- Reutiliza tus pills -->
+          <a class="lang-pill" href="/index.html" data-lang="de" aria-label="Deutsch">
+            <img class="lang-flag" src="../assets/img/svg-png/flag_g.png" alt="DE">
+            <span class="lang-text" data-glitch="DE">DE</span>
+          </a>
+          <a class="lang-pill" href="/en/index.html" data-lang="en" aria-label="English">
+            <img class="lang-flag" src="../assets/img/svg-png/flag_en.png" alt="EN">
+            <span class="lang-text" data-glitch="EN">EN</span>
+          </a>
+          <a class="lang-pill" href="#" data-lang="es" aria-label="Español">
+            <img class="lang-flag" src="../assets/img/svg-png/flag_es.png" alt="ES">
+            <span class="lang-text" data-glitch="ES">ES</span>
+          </a>
+        </div>
+
+        <button class="btn-cyberpunk nav__panelCta" id="btn-abrir-modal-mobile">
+          Kontakt aufnehmen
+        </button>
+      </div>
     </header>
-    
-    <div class="separacion" style="height: 3rem;"></div>
+    <!-- FIN NAVBAR -->
 
     <!-- HERO -->
     <section class="hero" id="inicio">
@@ -183,7 +224,7 @@
 
     
 
-    <div class="separacion" style="height: 6rem;"></div>
+    <div class="separacion1"></div>
     <!-- TECNOLOGIAS -->
     <section class="tech-section" id="tecnologias">
       <h2 class="tech-title">Tecnologías que utilizo</h2>
@@ -669,6 +710,20 @@
         <span class="btn-top__text">TOP</span>
       </span>
     </button>
+    <!-- Cookie Banner (compact) -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie banner" hidden>
+      <div class="cookie-banner__inner">
+        <p class="cookie-banner__text">
+          Usamos cookies para mejorar tu experiencia. Puedes aceptar o rechazar.
+          <a class="cookie-banner__link" href="/privacy.html">Ver política</a>
+        </p>
+
+        <div class="cookie-banner__actions">
+          <button class="cookie-btn cookie-btn--ghost" id="cookieReject" type="button">Rechazar</button>
+          <button class="cookie-btn cookie-btn--primary" id="cookieAccept" type="button">Aceptar</button>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -676,6 +731,7 @@
   
   <!-- SCRIPTS -->
   <script src="../assets/js/cursor.js"></script>
+  <script src="../assets/js/cookies.js"></script>
   <script src="../assets/js/navbar.js"></script>
   <script type="module" src="../assets/js/back.js"></script>
   <script src="../assets/js/top.js"></script>
