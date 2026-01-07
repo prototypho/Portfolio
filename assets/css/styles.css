@@ -442,3 +442,18 @@ body {
 .separacion1 {
   height: 6rem;
 }
+.cont_impressum{
+  width: 100%;
+  margin-top: 3rem;
+}
+.imp-titel{
+  font-size: 38px;
+  color: var(--silver);
+  margin-bottom: 1rem;
+}
+.imp-sub{
+  font-size: 18px;
+  color: var(--text-main);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}

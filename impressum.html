@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webentwickler & Softwareentwickler in Rheinland-Pfalz | JR Developer</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta name="description" content="Maßgeschneiderte Webentwicklung, API-Integration, SEO-Optimierung und technischer Support für Unternehmen." />
+    <meta name="keywords" content="Webentwicklung, API-Integration, SEO-Optimierung, technischer Support, maßgeschneiderte Websites, digitale Lösungen, Performance-Optimierung, Backend-Entwicklung, Full-Stack-Entwicklung, Webdesign, Suchmaschinenoptimierung, IT-Support" />
+    <meta name="author" content="Jonathan Rodriguez - JR Developer" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jr-developer.de/" />
+    <meta property="og:title" content="Webentwickler & Softwareentwickler in Deutschland | JR Developer" />
+    <meta property="og:description" content="Maßgeschneiderte Webentwicklung, APIs, SEO und technischer Support für Unternehmen." />
+    <meta property="og:image" content="https://jr-developer.de/assets/img/og-image.jpg?v=2" />
+    <meta property="og:image:secure_url" content="https://jr-developer.de/assets/img/og-image.jpg?v=2" />
+    <meta property="og:site_name" content="JR Developer" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <link rel="canonical" href="https://jr-developer.de/" />
+    <link rel="alternate" hreflang="de-DE" href="https://jr-developer.de/" />
+    <link rel="alternate" hreflang="en" href="https://jr-developer.de/en/" />
+    <link rel="alternate" hreflang="es" href="https://jr-developer.de/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://jr-developer.de/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/tecno.css" />
+    <link rel="stylesheet" href="assets/css/proy.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/rotate_card.css" />
+    <link rel="stylesheet" href="assets/css/img_titulo.css" />
+    <link rel="stylesheet" href="assets/css/clientes.css" />
+    <link rel="stylesheet" href="assets/css/modal.css" />
+    <link rel="stylesheet" href="assets/css/social_nav.css">
+    <link rel="stylesheet" href="assets/css/top.css">
+    <link rel="stylesheet" href="assets/css/heroline.css">
+    <link rel="stylesheet" href="assets/css/cursor.css">
+    <link rel="stylesheet" href="assets/css/sub_cards.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/social.css">
+
+    <!-- Estilos para el fondo de Three.js -->
+    <style>
+        body { margin: 0; background: black; }
+        canvas {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;          /* <-- Pone el fondo detrás del contenido */
+        pointer-events: none; /* <-- El fondo no captura clicks */
+    }
+
+    </style>
+    <script type="importmap">
+    {
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.155/build/three.module.js"
+    }
+    }
+    </script>
+    <!-- FIN Estilos para el fondo de Three.js -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "JR Developer",
+      "url": "https://jr-developer.de/webentwickler-rheinland-pfalz/",
+      "image": "https://jr-developer.de/assets/img/og-image.jpg",
+      "telephone": "+49 160 7532093",
+      "email": "info@jr-developer.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sarresdorfer Str. 51",
+        "addressLocality": "Gerolstein",
+        "postalCode": "54568",
+        "addressRegion": "Rheinland-Pfalz",
+        "addressCountry": "DE"
+      },
+      "areaServed": [
+        "Rheinland-Pfalz",
+        "Eifel",
+        "Gerolstein",
+        "Daun",
+        "Bitburg",
+        "Trier"
+      ],
+      "knowsAbout": [
+        "Webentwicklung",
+        "API-Integration",
+        "Technisches SEO",
+        "Performance-Optimierung",
+        "IT-Support"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61586081579534"
+      ]
+    }
+    </script>
+
+</head>
+<body>
+  <h2 class="seo-only">
+    Webentwicklung & Softwarelösungen für Unternehmen in Rheinland-Pfalz
+    Warum Unternehmen aus der Eifel mit JR Developer arbeiten
+    Webdesign, APIs & SEO – lokal betreut
+  </h2>
+
+  <div class="page">
+    <!-- NAVBAR -->
+    <header class="nav">
+      <div class="nav__logo">
+        <img src="assets/img/JR dev_small.png" alt="JR dev logo">
+      </div>
+
+      <!-- Todo lo que va a la derecha -->
+      <div class="nav__right">
+        <nav class="nav__links" id="nav-links">
+          <a href="#servicios" class="nav__link">Dienstleistungen</a>
+          <a href="#proyectos" class="nav__link">Projekte</a>
+          <a href="#sobre-mi" class="nav__link">Über mich</a>
+        </nav>
+
+        <div class="nav__lang" id="nav-lang">
+          <a class="lang-pill" href="index.html" data-lang="de" aria-label="Deutsch">
+            <img class="lang-flag" src="assets/img/svg-png/flag_g.png" alt="DE">
+            <span class="lang-text" data-glitch="DE">DE</span>
+          </a>
+          <a class="lang-pill" href="/en/index.html" data-lang="en" aria-label="English">
+            <img class="lang-flag" src="assets/img/svg-png/flag_en.png" alt="EN">
+            <span class="lang-text" data-glitch="EN">EN</span>
+          </a>
+          <a class="lang-pill" href="/es/index.html" data-lang="es" aria-label="Español">
+            <img class="lang-flag" src="assets/img/svg-png/flag_es.png" alt="ES">
+            <span class="lang-text" data-glitch="ES">ES</span>
+          </a>
+        </div>
+
+        <button id="btn-abrir-modal" class="btn-cyberpunk nav__ctaBtn">
+          Kontakt aufnehmen
+        </button>
+
+        <!-- Hamburguesa (solo visible en mobile) -->
+        <button class="nav__toggle"
+                id="nav-toggle"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="nav-panel">
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+        </button>
+      </div>
+
+      <!-- Panel mobile (clonado/mostrado) -->
+      <div class="nav__panel" id="nav-panel" hidden>
+        <nav class="nav__panelLinks">
+          <a href="#servicios" class="nav__panelLink">Dienstleistungen</a>
+          <a href="#proyectos" class="nav__panelLink">Projekte</a>
+          <a href="#sobre-mi" class="nav__panelLink">Über mich</a>
+        </nav>
+
+        <div class="nav__panelLang">
+          <!-- Reutiliza tus pills -->
+          <a class="lang-pill" href="index.html" data-lang="de" aria-label="Deutsch">
+            <img class="lang-flag" src="assets/img/svg-png/flag_g.png" alt="DE">
+            <span class="lang-text" data-glitch="DE">DE</span>
+          </a>
+          <a class="lang-pill" href="/en/index.html" data-lang="en" aria-label="English">
+            <img class="lang-flag" src="assets/img/svg-png/flag_en.png" alt="EN">
+            <span class="lang-text" data-glitch="EN">EN</span>
+          </a>
+          <a class="lang-pill" href="/es/index.html" data-lang="es" aria-label="Español">
+            <img class="lang-flag" src="assets/img/svg-png/flag_es.png" alt="ES">
+            <span class="lang-text" data-glitch="ES">ES</span>
+          </a>
+        </div>
+
+        <button class="btn-cyberpunk nav__panelCta" id="btn-abrir-modal-mobile">
+          Kontakt aufnehmen
+        </button>
+      </div>
+    </header>
+    <!-- FIN NAVBAR -->
+
+<h1 class="hero-title">
+  Impressum
+</h1>
+<p class="hero-sub">
+  Angaben gemäß § 5 TMG:</p>
+<p class="hero-sub">
+  Jonathan Rodriguez<br>
+  Sarresdorfer Str. 51<br>
+  54568 Gerolstein<br>
+  Deutschland</p>
+
+  <div class="cont_impressum">
+    <h2 class="imp-titel">Haftungsausschluss:</h2>
+    <p class="imp-sub">
+  Haftung für Inhalte
+
+  Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+
+  Haftung für Links
+
+  Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+
+  Urheberrecht
+
+  Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+  Weitere Informationen finden Sie in der Datenschutzerklärung.
+
+  Außergerichtliche Streitbeilegung
+
+  Aufgrund einer gesetzlichen Verpflichtung bin ich verpflichtet, Sie unabhängig von meiner Teilnahme an einem Verfahren zur alternativen Streitbeilegung darüber zu informieren, dass die Europäische Kommission zur außergerichtlichen Streitbeilegung von verbraucherrechtlichen Streitigkeiten eine Plattform zur Online-Streitbeilegung (OS) eingerichtet hat. Die Plattform finden Sie unter: http://ec.europa.eu/consumers/odr/
+  </div>
+
+<div class="separacion" style="height: 40rem;" id="sobre-mi"></div>
+
+  <!-- FOOTER -->
+  <footer id="footerReveal">
+    <!-- SOBRE MI -->
+      <section class="about-section">
+        <h2 class="about-title">Über mich</h2>
+
+        <div class="about-wrapper">
+
+          <!-- FOTO CON PARALLAX -->
+          <div class="about-photo" data-parallax>
+            <img src="assets/img/yo.png" alt="Foto programando">
+          </div>
+
+          <!-- TEXTO -->
+          <div class="about-text">
+            <h3>Hallo, ich bin <span class="golden">Jonathan Rodriguez</span></h3>
+            <p>
+              Full-Stack-Webentwickler mit Spezialisierung auf moderne Benutzeroberflächen, schnelle APIs und technische Optimierung. Ich verbinde elegantes Design mit professioneller Performance, um Projekte zu realisieren, die Qualität, Präzision und eine starke digitale Identität vermitteln.
+            </p>
+          </div>
+        </div> 
+      </section>
+      <!-- FIN SOBRE MI -->
+      <div class="foot">
+        <div class="foot1">© <strong>Jonathan Rodriguez - JR Developer - Sarresdorfer Str. 51 - Gerolstein - Deutschland </strong></div>
+        <div class="foot2"><a href="/webentwickler-rheinland-pfalz/index.html">Webentwickler in Rheinland-Pfalz</a> · Schreiben Sie mir an ✉ <a href="mailto:info@jr-developer.de">info@jr-developer.de</a></div>
+      </div>
+      
+  </footer>
+
+  <!-- Modal -->
+    <div id="modal-contacto" class="modal-overlay" aria-hidden="true">
+      <div class="modal-contenido">
+        <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+
+        <h2>Vereinbaren Sie einen Anruf oder senden Sie mir eine E-Mail.</h2>
+        <p class="modal-subtitulo">
+          Hinterlassen Sie mir Ihre Kontaktdaten, dann vereinbaren wir einen Telefontermin oder ich antworte Ihnen per E-Mail.
+        </p>
+
+        <form
+        class="form-cyberpunk"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field">
+
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+          <!-- Datos básicos -->
+          <div class="grupo-campo">
+            <label for="nombre">Name und Nachname</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="grupo-campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="grupo-campo">
+            <label for="telefono">Telefon (optional)</label>
+            <input type="tel" id="telefono" name="telefono" />
+          </div>
+
+          <!-- Preferencia de contacto -->
+          <fieldset class="grupo-campo grupo-opciones">
+            <legend>Wie möchten Sie kontaktiert werden?</legend>
+            <label>
+              <input type="radio" name="preferencia_contacto" value="telefono" checked />
+              Telefonanruf
+            </label>
+            <!-- Fecha y hora deseadas para llamada -->
+          <div class="grupo-campo-doble" id="bloque-fecha-hora">
+            <div class="grupo-campo">
+              <label for="fecha">Datum gewünscht</label>
+              <input type="date" id="fecha" name="fecha" />
+            </div>
+            <div class="grupo-campo">
+              <label for="hora">Zeit gewünscht</label>
+              <input type="time" id="hora" name="hora" />
+            </div>
+          </div>
+            <label>
+              <input type="radio" name="preferencia_contacto" value="email" />
+              Email
+            </label>
+          </fieldset>
+
+          <!-- Mensaje / consulta -->
+          <div class="grupo-campo">
+            <label for="mensaje">Anfrage/Nachricht</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+
+          <!-- Botones -->
+            <button type="submit" class="btn-cyberpunk">
+              Anfrage senden
+            </button>
+        </form>
+      </div>
+    </div>
+
+    <button id="btn-top" class="btn-top" aria-label="Volver arriba" title="Top">
+      <svg class="btn-top__ring" viewBox="0 0 44 44" aria-hidden="true">
+        <circle class="btn-top__ring-bg" cx="22" cy="22" r="18"></circle>
+        <circle class="btn-top__ring-progress" cx="22" cy="22" r="18"></circle>
+      </svg>
+
+      <span class="btn-top__content">
+        <span class="btn-top__icon">↑</span>
+        <span class="btn-top__text">TOP</span>
+      </span>
+    </button>
+    <!-- Cyberpunk Social Dock -->
+    <div class="social-dock" aria-label="Accesos rápidos">
+
+      <a class="social-float social-float--wa"
+        href="https://wa.me/491607532093"
+        target="_blank" rel="noopener"
+        aria-label="WhatsApp">
+        <img src="/assets/img/wsp.png"
+            alt=""
+            class="social-icon-png" />
+      </a>
+
+      <a class="social-float social-float--fb"
+        href="https://www.facebook.com/profile.php?id=61586081579534"
+        target="_blank" rel="noopener"
+        aria-label="Facebook">
+        <img src="/assets/img/facebook.png"
+            alt=""
+            class="social-icon-png" />
+      </a>
+
+    </div>
+
+
+    <!-- Cookie Banner (compact) -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie banner" hidden>
+      <div class="cookie-banner__inner">
+        <p class="cookie-banner__text">
+          Wir verwenden Cookies, um Ihr Nutzererlebnis zu verbessern. Sie können diese akzeptieren oder ablehnen.
+          <a class="cookie-banner__link" href="/privacy.html">Siehe Richtlinie</a>
+        </p>
+
+        <div class="cookie-banner__actions">
+          <button class="cookie-btn cookie-btn--ghost" id="cookieReject" type="button">Stornieren</button>
+          <button class="cookie-btn cookie-btn--primary" id="cookieAccept" type="button">Akzeptieren</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  
+  <!-- SCRIPTS -->
+  
+  <script type="module" src="assets/js/back.js"></script>
+  <script src="assets/js/cookies.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/top.js"></script>
+  <script src="assets/js/img_titulo.js"></script>
+  <script src="assets/js/heroline.js"></script>
+  <script src="assets/js/sub_cards.js"></script>
+  <script src="assets/js/tecno.js"></script>
+  <script src="assets/js/proy.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/rotate_card.js"></script>
+  <script src="assets/js/modal.js"></script>
+</body>
+</html>
