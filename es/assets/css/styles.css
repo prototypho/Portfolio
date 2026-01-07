@@ -109,7 +109,8 @@ body {
   font-family: "Racing Sans One", sans-serif;
   color: white;
   font-size: 45px;
-  width: 840px;
+  width: 1040px;
+  bottom: 10px;
 }
 
 /* --------- CAPA ESCRITA (typing) --------- */
