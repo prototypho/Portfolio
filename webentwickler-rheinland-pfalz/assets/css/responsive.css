@@ -3,8 +3,20 @@
 ============================================================= */
 @media (min-width: 376px) and (max-width: 425px) {
     .hero-title {
-    font-size: 20px;
-    width: 540px;
+        font-size: 30px;
+        width: 400px !important;
+    }
+    .typing-layer,
+    .glow-layer {
+        white-space: normal;            /* ✅ permite saltos */
+        overflow-wrap: break-word;      /* ✅ rompe palabras largas */
+        word-break: break-word;         /* extra */
+    }
+
+    .typing-layer {
+        overflow: visible;              /* para que no recorte */
+        animation: none;                /* ✅ evita bugs en multilínea */
+        width: auto;
     }
     .cursor {
         width: 3px;
