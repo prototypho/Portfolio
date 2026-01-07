@@ -1,0 +1,411 @@
+
+    /* ---------- NAVBAR ---------- */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 5, 12, 0.92),
+        rgba(5, 5, 12, 0.78),
+        transparent
+      );
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    }
+
+    .nav__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .nav__logo img{
+        width: 150px;
+        
+    
+    }
+
+    .nav__links {
+      display: flex;
+      gap: 22px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-family: "Racing Sans One", sans-serif;
+    }
+
+    .nav__link {
+      position: relative;
+      padding-bottom: 4px;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .nav__link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), var(--silver));
+      transition: width 0.25s ease-out;
+    }
+
+    .nav__link:hover {
+      color: var(--text-main);
+    }
+
+    .nav__link:hover::after {
+      width: 100%;
+    }
+
+    .nav__cta {
+      font-size: 13px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      background: rgba(5, 5, 10, 0.7);
+      box-shadow: 0 0 16px rgba(245, 193, 75, 0.25);
+      cursor: pointer;
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out,
+        background 0.15s ease-out;
+    }
+
+    .nav__cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 26px rgba(245, 193, 75, 0.4);
+      background: rgba(8, 8, 15, 0.95);
+    }
+
+/* ============================
+   NAV LANG (CYBERPUNK CLEAN)
+   Solo muestra: DE / EN / ES
+   Sin dropdown, sin expand raro
+   ============================ */
+
+.nav__lang{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 14px;
+}
+
+/* PILL */
+.lang-pill{
+  --w: 76px;
+  --h: 40px;
+
+  width: var(--w);
+  height: var(--h);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border-radius: 999px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(7, 7, 14, .55);
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.45),
+    inset 0 0 0 1px rgba(255,255,255,.03);
+
+  transition:
+    transform .16s ease,
+    border-color .16s ease,
+    box-shadow .16s ease,
+    background .16s ease;
+}
+
+/* scanlines muy sutiles */
+.lang-pill::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.22;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(255,255,255,.06) 0px,
+      rgba(255,255,255,.06) 1px,
+      transparent 2px,
+      transparent 6px
+    );
+  mix-blend-mode: screen;
+}
+
+/* glow en el borde (solo hover/active) */
+.lang-pill::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: inherit;
+  pointer-events:none;
+  opacity:0;
+  filter: blur(10px);
+  background: linear-gradient(90deg,
+    rgba(0,255,255,0),
+    rgba(0,255,255,.22),
+    rgba(255,0,200,.18),
+    rgba(245,193,75,.14),
+    rgba(0,255,255,0)
+  );
+  transition: opacity .16s ease;
+}
+
+/* Flag */
+.lang-flag{
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 8px 14px rgba(0,0,0,.40);
+  transition: transform .16s ease, filter .16s ease;
+}
+
+/* Texto DE/EN/ES */
+.lang-text{
+  font-family: "Racing Sans One", sans-serif;
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.90);
+  text-shadow: 0 0 10px rgba(0,255,255,.08);
+  position: relative;
+}
+
+/* Hover */
+.lang-pill:hover,
+.lang-pill:focus-visible{
+  transform: translateY(-1px);
+  border-color: rgba(255, 251, 0, 0.22);
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.55),
+    0 0 18px rgba(255, 230, 0, 0.1);
+}
+
+.lang-pill:hover::after,
+.lang-pill:focus-visible::after{
+  opacity:1;
+}
+
+.lang-pill:hover .lang-flag,
+.lang-pill:focus-visible .lang-flag{
+  transform: scale(1.06);
+  filter: saturate(1.15) contrast(1.05);
+}
+
+/* Active seleccionado */
+.lang-pill.is-active{
+  border-color: rgba(255,0,200,.26);
+  box-shadow:
+    0 16px 38px rgba(0,0,0,.60),
+    0 0 24px rgba(255,0,200,.10);
+}
+.lang-pill.is-active::after{
+  opacity:1;
+}
+
+/* ============================
+   GLITCH SUAVE SOLO EN EL TEXTO
+   (no mueve layout)
+   ============================ */
+.lang-text{
+  --c1: rgba(0,255,255,.65);
+  --c2: rgba(255,0,200,.55);
+}
+
+.lang-text::before,
+.lang-text::after{
+  content: attr(data-glitch);
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lang-text::before{
+  color: var(--c1);
+  transform: translateX(1px);
+}
+.lang-text::after{
+  color: var(--c2);
+  transform: translateX(-1px);
+}
+
+/* Clase que activa el glitch (la pone el JS) */
+.lang-text.is-glitch::before,
+.lang-text.is-glitch::after{
+  opacity: 1;
+  animation: glitchSoft .22s steps(2, end) 1;
+}
+
+@keyframes glitchSoft{
+  0%   { clip-path: inset(0 0 70% 0); }
+  50%  { clip-path: inset(35% 0 25% 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+/* Ripple (JS) */
+.lang-pill .ripple{
+  position:absolute;
+  left: var(--rx);
+  top: var(--ry);
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  pointer-events:none;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle,
+    rgba(0,255,255,.28),
+    rgba(255,0,200,.14),
+    transparent 70%);
+  animation: ripple .55s ease-out forwards;
+}
+
+@keyframes ripple{
+  to{ width: 220px; height: 220px; opacity: 0; }
+}
+
+/* Mobile: más compacto */
+@media (max-width: 520px){
+  .lang-pill{ --w: 78px; }
+  .lang-text{ letter-spacing: .18em; }
+}
+
+
+/* ---------- NAV RIGHT GROUP ---------- */
+.nav__right{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+}
+
+/* Botón hamburguesa */
+.nav__toggle{
+  display:none; /* desktop off */
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(7,7,14,.55);
+  backdrop-filter: blur(10px);
+  cursor:pointer;
+  position: relative;
+  box-shadow: 0 10px 24px rgba(0,0,0,.45);
+}
+
+.nav__toggle:focus-visible{
+  outline: 2px solid rgba(245,193,75,.6);
+  outline-offset: 3px;
+}
+
+.nav__bar{
+  display:block;
+  width: 20px;
+  height: 2px;
+  margin: 5px auto;
+  background: rgba(255,255,255,.85);
+  border-radius: 999px;
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+/* Estado abierto (animación a X) */
+.nav.is-open .nav__bar:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+.nav.is-open .nav__bar:nth-child(2){ opacity: 0; }
+.nav.is-open .nav__bar:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- PANEL MOBILE ---------- */
+.nav__panel{
+  position: fixed;
+  top: 64px;             /* ajusta según tu header */
+  right: 12px;
+  left: 12px;
+  z-index: 50;
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(5, 5, 12, 0.92);
+  border: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.60);
+}
+
+.nav__panelLinks{
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.nav__panelLink{
+  text-decoration:none;
+  font-family: "Racing Sans One", sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(255,255,255,.86);
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.nav__panelLink:hover{
+  background: rgba(255,255,255,.06);
+}
+
+.nav__panelLang{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.nav__panelCta{
+  width: 100%;
+}
+
+/* ---------- RESPONSIVE NAV ---------- */
+@media (max-width: 900px){
+  .nav__links,
+  .nav__lang,
+  .nav__ctaBtn{
+    display:none;
+  }
+
+  .nav__toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  /* logo se mantiene a la izquierda; derecha solo muestra toggle */
+  .nav{
+    padding: 10px 10px;
+  }
+
+  .nav__logo img{
+    width: 130px; /* un pelín más pequeño en mobile */
+  }
+}
+
+/* opcional: en pantallas muy pequeñas */
+@media (max-width: 420px){
+  .nav__logo img{ width: 118px; }
+  .nav__panel{ top: 60px; }
+}

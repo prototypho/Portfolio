@@ -1,0 +1,311 @@
+/* === SECCIÓN TECNOLOGÍAS === */
+
+.tech-section {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.tech-title {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, var(--gold), var(--silver));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Racing Sans One", sans-serif;
+}
+
+.tech-sub {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 26px;
+  justify-items: center;
+  margin: 5rem 0 3rem 0;
+}
+
+/* CARD */
+.tech-item {
+  padding: 28px 14px 18px; /* Más padding arriba */
+  background: rgba(10, 10, 15, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  width: 160px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  backdrop-filter: blur(8px);
+  overflow: visible; /* 🔥 PERMITE QUE LA IMAGEN SALGA */
+  position: relative;
+}
+/* Contenedor interno que se mueve con hover */
+.tech-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transform: translateY(0);
+  transition: transform 0.35s ease;
+}
+
+
+/* ICONO QUE SALE DEL CONTENEDOR */
+/* Estado normal: imagen centrada dentro de la card */
+.tech-item img {
+  width: 115px;
+  height: 115px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.15));
+  margin-bottom: 5px;
+}
+
+
+
+/* TEXTO */
+.tech-item span {
+  position: absolute;  /* <-- clave */
+  top: 100%;           /* fuera de la vista */
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: var(--silver);
+  letter-spacing: 0.08em;
+  line-height: 1.3em;
+
+  opacity: 0;  
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 1;
+}
+.tech-item span h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #f5c14b;
+  text-shadow: 0 0 8px rgba(245, 193, 75, 1);
+}
+.tech-item span p {
+  margin: 6px 0 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+} 
+
+
+/* Al hacer hover → texto aparece */
+.tech-item:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* HOVER moderno tipo Apple */
+.tech-item:hover {
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 10px 32px rgba(245, 193, 75, 0.25);
+  border-color: rgba(245, 193, 75, 0.4);
+  animation: neonPulse 2.4s infinite ease-in-out;
+}
+
+/* Reveal inicial */
+.tech-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.tech-item.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  
+}
+.tech-item.show span{
+  pointer-events: none;
+  
+}
+
+.tech-item:hover .tech-content {
+  transform: translateY(-112px);
+}
+
+/* ------ CONTENEDOR ------ */
+.more-container {
+  text-align: center;
+}
+
+/* ------ BOTÓN FUTURISTA ------ */
+.more-btn {
+  padding: 12px 28px;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: rgba(15, 15, 25, 0.6);
+  border: 1px solid rgba(218, 204, 80, 0.4);
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--silver);
+  font-weight: 600;
+  transition: all 0.35s ease;
+  position: relative;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 14px rgba(172, 169, 22, 0.2);
+}
+
+.more-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 22px rgba(222, 235, 43, 0.637);
+  border-color: rgba(194, 191, 11, 0.6);
+}
+
+/* Flecha holográfica */
+.more-btn .arrow {
+  display: inline-block;
+  margin-left: 12px;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  color: #ccc22f;
+  text-shadow: 0 0 8px #bdb113;
+}
+
+/* Rotar en open */
+.more-btn.open .arrow {
+  transform: rotate(90deg);
+}
+
+/* ------ ACORDEÓN CYBERPUNK ------ */
+.accordion {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.35s ease;
+  margin-top: 20px;
+
+  background: rgba(10, 12, 20, 0.55);
+  border-radius: 16px;
+  border: 1px solid rgba(190, 202, 23, 0.25);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 
+      0 0 18px rgba(205, 207, 43, 0.25),
+      inset 0 0 22px rgba(100, 94, 34, 0.08);
+
+  padding: 0; /* CERRADO */
+}
+
+/* Luz pulsante interna */
+.accordion.open {
+  animation: neonPulse 2.4s infinite ease-in-out;
+  padding: 24px;
+  max-height: 2000px; /* Un valor grande para permitir auto-ajuste */
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 14px rgba(165, 155, 9, 0.3),
+      inset 0 0 24px rgba(175, 172, 5, 0.15);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(168, 171, 172, 0.6),
+      inset 0 0 34px rgba(255, 255, 255, 0.25);
+  }
+}
+
+/* TÍTULO */
+.accordion h3 {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  color: #f5c14b;
+  text-shadow: 0 0 8px rgba(245, 193, 75, 1);
+  margin-bottom: 18px;
+  letter-spacing: 0.12em;
+}
+
+/* LISTA */
+.accordion ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.accordion li {
+  padding: 6px 0;
+  font-size: 15px;
+  color: var(--silver);
+  letter-spacing: 0.07em;
+  position: relative;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: slideIn 0.4s ease forwards;
+}
+
+/* Animación secuencial */
+.accordion li:nth-child(1) { animation-delay: .1s; }
+.accordion li:nth-child(2) { animation-delay: .15s; }
+.accordion li:nth-child(3) { animation-delay: .2s; }
+.accordion li:nth-child(4) { animation-delay: .25s; }
+.accordion li:nth-child(5) { animation-delay: .3s; }
+.accordion li:nth-child(6) { animation-delay: .35s; }
+.accordion li:nth-child(7) { animation-delay: .4s; }
+.accordion li:nth-child(8) { animation-delay: .45s; }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== MINI CARDS GRID ===== */
+.mini-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+  padding-top: 10px;
+}
+
+/* ===== MINI CARD FUTURISTA ===== */
+.mini-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: rgba(10, 15, 25, 0.55);
+  border: 1px solid rgba(187, 195, 197, 0.25);
+  border-radius: 14px;
+  padding: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 14px rgba(187, 195, 197, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover Neon */
+.mini-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 26px rgba(245, 193, 75, 1);
+  border-color: rgba(245, 193, 75, 0.6);
+}
+
+/* Icono */
+.mini-card img {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  
+}
+
+/* Títulos */
+.mini-info h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #f5c14b;
+  text-shadow: 0 0 8px rgba(245, 193, 75, 1);
+}
+
+/* Descripción */
+.mini-info p {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.3em;
+}

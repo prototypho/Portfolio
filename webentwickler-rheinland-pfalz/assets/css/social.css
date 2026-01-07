@@ -1,0 +1,85 @@
+/* ============================
+   FLOATING SOCIAL ICONS (PNG ONLY)
+   ============================ */
+.social-dock{
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  display: grid;
+  gap: 14px;
+}
+
+/* botón invisible */
+.social-float{
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+
+  /* zona táctil cómoda */
+  width: 56px;
+  height: 56px;
+}
+
+/* PNG */
+.social-icon-png{
+  width: 72px;
+  height: 72px;
+  display: block;
+  object-fit: contain;
+
+  /* estabilidad mobile */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  /* glow base */
+  filter:
+    drop-shadow(0 0 10px rgba(245,193,75,.35))
+    drop-shadow(0 0 20px rgba(0,0,0,.6));
+
+  transition: transform .18s ease, filter .18s ease;
+}
+
+/* Hover desktop */
+.social-float:hover .social-icon-png{
+  transform: scale(1.06);
+  filter:
+    drop-shadow(0 0 14px rgba(245,193,75,.55))
+    drop-shadow(0 0 26px rgba(0,0,0,.7));
+}
+
+/* Facebook: silver glow */
+.social-float--fb .social-icon-png{
+  filter:
+    drop-shadow(0 0 10px rgba(192,192,192,.35))
+    drop-shadow(0 0 20px rgba(0,0,0,.6));
+}
+
+.social-float--fb:hover .social-icon-png{
+  filter:
+    drop-shadow(0 0 14px rgba(192,192,192,.55))
+    drop-shadow(0 0 26px rgba(0,0,0,.7));
+}
+
+/* Active (tap feedback) */
+.social-float:active .social-icon-png{
+  transform: scale(0.96);
+}
+
+/* Mobile: abajo y sin filtros pesados */
+@media (max-width: 520px){
+  .social-dock{
+    top: auto;
+    bottom: calc(96px + env(safe-area-inset-bottom)); /* evita chocar con btn-top */
+    transform: none;
+  }
+
+  .social-icon-png{
+    filter:
+      drop-shadow(0 0 6px rgba(0,0,0,.7));
+  }
+}

@@ -1,0 +1,100 @@
+/* ============================
+   CUSTOM CURSOR (CYBERPUNK)
+   ============================ */
+
+/* Oculta cursor nativo solo en desktop (JS agrega .has-custom-cursor en <html>) */
+html.has-custom-cursor, 
+html.has-custom-cursor body {
+  cursor: none;
+}
+
+/* Elementos del cursor (los crea el JS) */
+.cy-cursor,
+.cy-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+/* Punto */
+.cy-cursor {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(241, 198, 3, 0.92);
+  box-shadow:
+    0 0 16px rgba(0,255,255,.18),
+    0 0 22px rgba(255,0,200,.10);
+}
+
+/* Anillo */
+.cy-cursor-ring {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 238, 0, 0.35);
+  box-shadow:
+    0 0 18px rgba(255, 251, 0, 0.12),
+    inset 0 0 0 1px rgba(255,255,255,.04);
+  backdrop-filter: blur(2px);
+}
+
+/* Scanline sutil dentro del anillo */
+.cy-cursor-ring::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 999px;
+  opacity: .22;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(255,255,255,.08) 0px,
+    rgba(255,255,255,.08) 1px,
+    transparent 2px,
+    transparent 6px
+  );
+  mix-blend-mode: screen;
+}
+
+/* Visible (JS lo activa al mover mouse) */
+html.has-custom-cursor .cy-cursor,
+html.has-custom-cursor .cy-cursor-ring {
+  opacity: 1;
+}
+
+/* Hover sobre links/botones */
+.cy-hover .cy-cursor {
+  width: 8px;
+  height: 8px;
+  box-shadow:
+    0 0 18px rgba(0,255,255,.22),
+    0 0 28px rgba(245,193,75,.10);
+}
+
+
+/* Click feedback */
+.cy-down .cy-cursor-ring {
+  width: 28px;
+  height: 28px;
+  border-color: rgba(245,193,75,.42);
+}
+
+/* Ocultar cursor si sales del viewport */
+.cy-hidden .cy-cursor,
+.cy-hidden .cy-cursor-ring {
+  opacity: 0 !important;
+}
+
+/* Accesibilidad: si reduce motion, no usamos cursor custom */
+@media (prefers-reduced-motion: reduce) {
+  html.has-custom-cursor, 
+  html.has-custom-cursor body {
+    cursor: auto;
+  }
+  .cy-cursor, .cy-cursor-ring { display: none !important; }
+}

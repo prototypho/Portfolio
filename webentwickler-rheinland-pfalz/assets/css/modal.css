@@ -1,0 +1,277 @@
+/* Botón principal */
+.btn-cyberpunk {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(204, 179, 40, 0.8);
+  background: linear-gradient(135deg, #c7ac14, #c0c0c0);
+  color: #000;
+  font-size: 0.95rem;
+  font-weight: 480;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  box-shadow:
+    0 0 12px rgba(255, 215, 0, 0.7),
+    0 0 24px rgba(192, 192, 192, 0.5);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.btn-cyberpunk:hover {
+  transform: translateY(-1px) scale(1.03);
+  filter: brightness(1.05);
+  box-shadow:
+    0 0 18px rgba(199, 173, 29, 0.9),
+    0 0 30px rgba(192, 192, 192, 0.8);
+}
+
+/* Botón secundario */
+.btn-secundario {
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(192, 192, 192, 0.7);
+  background: #111;
+  color: #c0c0c0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn-secundario:hover {
+  background: #222;
+  border-color: #ffd700;
+  color: #ffd700;
+}
+
+/* Overlay del modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255, 215, 0, 0.05), rgba(0, 0, 0, 0.9));
+  display: none; /* por defecto oculto */
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Estado visible (lo activamos con JS) */
+.modal-overlay.activo {
+  display: flex;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background: radial-gradient(circle at top left, #262626, #050505);
+  border-radius: 22px;
+  padding: 2.2rem 2rem 1.8rem;
+  border: 1px solid rgba(192, 192, 192, 0.8);
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(255, 215, 0, 0.3);
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+
+
+/* Botón cerrar (X) */
+.modal-cerrar {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.9rem;
+  background: transparent;
+  border: none;
+  color: #c0c0c0;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.modal-cerrar:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.modal-contenido h2 {
+  font-size: 1.7rem;
+  margin: 0 0 0.4rem;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-family: "Racing Sans One", sans-serif;
+}
+
+.modal-subtitulo {
+  font-size: 0.9rem;
+  color: #c0c0c0;
+  margin-bottom: 1.4rem;
+}
+
+/* Formulario */
+.form-cyberpunk {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.grupo-campo-doble {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 540px) {
+  .grupo-campo-doble {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grupo-campo label,
+.grupo-opciones legend {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #c0c0c0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+textarea {
+  background: #050505;
+  border: 1px solid rgba(192, 192, 192, 0.6);
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.92rem;
+  color: #f5f5f5;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ffd700;
+  box-shadow:
+    0 0 8px rgba(255, 215, 0, 0.7),
+    0 0 16px rgba(192, 192, 192, 0.5);
+  background: #080808;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* Opciones de radio */
+.grupo-opciones {
+  border: 1px dashed rgba(192, 192, 192, 0.4);
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.grupo-opciones label {
+  font-size: 0.85rem;
+  text-transform: none;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #e0e0e0;
+}
+
+.grupo-opciones input[type="radio"] {
+  accent-color: #ffd700;
+}
+
+/* Acciones */
+.modal-acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+#bloque-fecha-hora {
+  display: none; /* oculto por defecto */
+}
+
+/* ===== FIX MODAL MOBILE + Z-INDEX + SCROLL ===== */
+.modal-overlay{
+  z-index: 9999;                 /* más alto que nav/panel */
+  padding: 16px;                 /* aire en bordes */
+  overflow-y: auto;              /* si el modal es alto, que scrollee */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* En móviles iOS/Android: centra arriba un poco, no totalmente al medio */
+.modal-contenido{
+  margin: auto;
+  max-height: calc(100dvh - 32px); /* viewport dinámico (mejor que 100vh) */
+  overflow: auto;                  /* scroll dentro del modal si hace falta */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Si tu menú hamburguesa usa panel fixed, esto evita que se “coma” el modal */
+.nav__panel{
+  z-index: 2000;
+}
+
+/* Ajustes específicos mobile */
+@media (max-width: 540px){
+  .modal-overlay{
+    align-items: flex-start;     /* en vez de centro perfecto */
+    padding-top: 18px;
+  }
+
+  .modal-contenido{
+    border-radius: 18px;
+    padding: 1.4rem 1.1rem 1.2rem;
+    max-width: 100%;
+  }
+
+  .modal-contenido h2{
+    font-size: 1.15rem;
+    letter-spacing: 0.12em;
+    line-height: 1.1;
+  }
+
+  .modal-subtitulo{
+    font-size: 0.85rem;
+  }
+
+  textarea{
+    min-height: 95px;
+  }
+}
