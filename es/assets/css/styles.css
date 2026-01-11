@@ -112,16 +112,29 @@ body {
   width: 1040px;
   bottom: 10px;
 }
+    .hero-main-video {
+  position: absolute;
+  inset: -16% -12%;
+  width: calc(100% + 14%);
+  height: calc(100% + 22%);
+  object-fit: cover;
+  filter: saturate(0.9) contrast(1.1);
+  transform: translateY(6px);
+  transition: transform 0.4s ease-out;
+}
+.hero-card:hover .hero-main-video {
+  transform: translateY(0);
+}
 
 /* --------- CAPA ESCRITA (typing) --------- */
 .typing-layer {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  
   animation: typing 3s steps(40, end) forwards;
   position: relative;
   z-index: 3;
+  width: 100%;
 }
 
 /* --------- CAPA GLOW (NO typing) --------- */

@@ -3,7 +3,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 1.8rem;
+  padding: 0.8rem;
   border-radius: 999px;
   border: 1px solid rgba(204, 179, 40, 0.8);
   background: linear-gradient(135deg, #c7ac14, #c0c0c0);
@@ -20,6 +20,9 @@
     transform 0.2s ease,
     box-shadow 0.2s ease,
     filter 0.2s ease;
+    overflow: hidden;
+    max-height: 50px;
+    max-width: 330px;
 }
 
 .btn-cyberpunk:hover {
