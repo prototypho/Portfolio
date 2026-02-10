@@ -599,7 +599,6 @@
   width: 52px;
   height: 42px;
   margin-left: 12px;
-  background-image: url("/assets/img/mano.png");
   background-size: contain;
   background-repeat: no-repeat;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
