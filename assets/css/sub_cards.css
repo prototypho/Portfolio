@@ -133,3 +133,87 @@
     filter: none;
   }
 }
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets y pantallas medianas (hasta 768px) */
+@media (max-width: 768px) {
+  .section {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 48px;
+  }
+
+  .section-sub {
+    font-size: 32px;
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+
+  .service-card {
+    padding: 16px 14px 14px;
+    min-height: 130px;
+  }
+
+  .service-title {
+    font-size: 15px;
+  }
+
+  .service-desc {
+    font-size: 12px;
+  }
+}
+
+/* Móviles (hasta 480px) */
+@media (max-width: 480px) {
+  .section {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 32px;
+  }
+
+  .section-sub {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .service-card {
+    padding: 14px 12px 12px;
+    min-height: 120px;
+  }
+
+  .service-label {
+    font-size: 10px;
+  }
+
+  .service-title {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .service-desc {
+    font-size: 11px;
+    max-width: 100%;
+  }
+
+  .service-meta {
+    margin-top: 12px;
+    font-size: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .service-meta span.badge {
+    align-self: flex-start;
+  }
+}

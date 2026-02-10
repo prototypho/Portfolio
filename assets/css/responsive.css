@@ -79,6 +79,9 @@
     .drag-hint-wrapper {
         padding-top: 42%;
     }
+    .drag-hint-content {
+        display: none;
+    }
     .project-card {
         width: 320px;
         height: 340px;
@@ -137,8 +140,8 @@
     .logo-testimonio {
         bottom: -112px;        /* hace que sobresalga */
         right: -1px;      /* ajusta para que salga del borde */
-        width: 230px;
-        height: 180px;
+        width: 200px;
+        height: 140px;
         padding: 1px;
         margin-right: 5px;
        
@@ -146,6 +149,7 @@
     .btn-enlace {
         font-size: 10px;
         letter-spacing: 0.05em;
+        bottom: -10px;
     }
     .testimonio-texto {
         font-size: 14px;
