@@ -319,7 +319,7 @@ class CardStreamController {
         // Base de datos de tus tecnologías
         const cards = [
             { img: "../assets/img/SEO.jpg", title: "SEO", desc: "Optimización para motores de búsqueda y mejora de la visibilidad web." },
-            { img: "../assets/img/dash.jpg", title: "Dashboard", desc: "Panel de control para monitoreo y análisis de datos." },
+            { img: "../assets/img/dash.png", title: "Dashboard", desc: "Panel de control para monitoreo y análisis de datos." },
             { img: "../assets/img/hardware.jpeg", title: "Optimización Hardware", desc: "Mejora del rendimiento y eficiencia del hardware." },
             { img: "../assets/img/database.png", title: "Base de Datos", desc: "Gestión y organización eficiente de datos." },
         ];
