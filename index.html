@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="assets/css/img_titulo.css" />
     <link rel="stylesheet" href="assets/css/clientes.css" />
     <link rel="stylesheet" href="assets/css/modal.css" />
+    <link rel="stylesheet" href="assets/css/feedback.css" />
     <link rel="stylesheet" href="assets/css/social_nav.css">
     <link rel="stylesheet" href="assets/css/top.css">
     <link rel="stylesheet" href="assets/css/heroline.css">
@@ -649,11 +650,13 @@
     <div class="testimonio-card-grid">
     <article class="testimonio-card">
       <img src="/assets/img/back_cliente1.png" alt="Logo cliente" class="logo-testimonio">
-      <h3>Jonathan Agneessens Immobilien</h3>
+      <h3>Webplattform zur Immobilienverwaltung</h3>
       <p class="testimonio-texto">
-        “Ich kann Jonathan Rodriguez wärmstens empfehlen. Er ist ein absoluter Profi, der uns eine neue Website gebaut hat, die genau unseren Vorstellungen entspricht: modern und wirklich auf dem neuesten Stand der Technik!Er hat immer ein offenes Ohr und geht auf alle Wünsche des Kunden ein. Hier ist man keine Nummer, sondern der Kunde ist wirklich König. Auch für die Nachbetreuung und, ganz wichtig, die Suchmaschinenoptimierung ist Jonathan Rodriguez von der Firma JR Developer der richtige Mann!”
+        Entwicklung einer Webanwendung von Grund auf mit HTML, CSS und JavaScript, inklusive eines vollständig maßgeschneiderten Verwaltungssystems für Wohnimmobilien. Die Plattform bietet Admin-Panels zur Echtzeit-Bearbeitung von Inhalten und Daten.
+
+        Das Backend wurde mit Node.js, Prisma und PHP umgesetzt und auf einem VPS-Server mit PM2 und Nginx bereitgestellt, wodurch hohe Performance, Stabilität und Skalierbarkeit gewährleistet werden.
       </p>
-      <p class="testimonio-cliente">– Jonathan Agneessens-</p>
+      <p class="testimonio-cliente">Kundenfeedback siehe <a href="#" class="feedback-link" data-customer-name="Jonathan Agneessens" data-rating="5" data-feedback="Ich kann Jonathan Rodriguez wärmstens empfehlen. Er ist ein absoluter Profi, der uns eine neue Website gebaut hat, die genau unseren Vorstellungen entspricht: modern und wirklich auf dem neuesten Stand der Technik!Er hat immer ein offenes Ohr und geht auf alle Wünsche des Kunden ein. Hier ist man keine Nummer, sondern der Kunde ist wirklich König. Auch für die Nachbetreuung und, ganz wichtig, die Suchmaschinenoptimierung ist Jonathan Rodriguez von der Firma JR Developer der richtige Mann!">hier</a></p>
       <a href="https://www.ja-immo-eifel.de/" target="_blank" class="btn-enlace">
         siehe Website
       </a>
@@ -665,7 +668,7 @@
       <p class="testimonio-texto">
         Website in der Produktion.
       </p>
-      <p class="testimonio-cliente"></p>
+      <p class="testimonio-cliente">Kundenfeedback siehe <a href="#" class="feedback-link" data-customer-name="SwartzWäschen Team"  data-feedback="">hier</a></p>
       <a href="https://prototypho.github.io/Schwartzwasche-WebSite/" target="_blank" class="btn-enlace">
         siehe Website
       </a>
@@ -677,7 +680,7 @@
       <p class="testimonio-texto">
         Website in der Produktion.
       </p>
-      <p class="testimonio-cliente"></p>
+      <p class="testimonio-cliente">Kundenfeedback siehe <a href="#" class="feedback-link" data-customer-name="Maximiliano Solares" data-rating="5" data-feedback="Sehr zufrieden mit dem Ergebnis. Die Kommunikation war klar und das Design genau wie gewünscht. Sehr empfehlenswert!">hier</a></p>
       <a href="/assets/img/back_cliente3.png" target="_blank" class="btn-enlace">
         siehe Projekt
       </a>
@@ -837,6 +840,33 @@
     </div>
 
 
+
+
+    <!-- Feedback Modal -->
+    <div id="modal-feedback" class="modal-overlay" aria-hidden="true">
+      <div class="modal-contenido">
+        <button class="modal-cerrar" id="feedback-modal-close" aria-label="Cerrar">✕</button>
+        
+        <div class="feedback-header">
+          <div class="google-logo-container">
+            <img src="assets/img/google.png" alt="Google" id="feedback-google-logo">
+          </div>
+          <div class="feedback-stars" id="feedback-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+        </div>
+        
+        <h2 id="feedback-customer-name">Kunde</h2>
+        <div class="feedback-content">
+          <p id="feedback-text"></p>
+        </div>
+      </div>
+    </div>
+
     <!-- Cookie Banner (compact) -->
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie banner" hidden>
       <div class="cookie-banner__inner">
@@ -871,5 +901,6 @@
   <script src="assets/js/footer.js"></script>
   <script src="assets/js/rotate_card.js"></script>
   <script src="assets/js/modal.js"></script>
+  <script src="assets/js/feedback-modal.js"></script>
 </body>
 </html>

@@ -138,7 +138,7 @@
         margin-right: 6%;
     }
     .logo-testimonio {
-        bottom: -112px;        /* hace que sobresalga */
+        bottom: -140px;        /* hace que sobresalga */
         right: -1px;      /* ajusta para que salga del borde */
         width: 200px;
         height: 140px;
@@ -150,8 +150,9 @@
     .btn-enlace {
         font-size: 10px;
         letter-spacing: 0.05em;
-        bottom: -10px;
+        bottom: -14px;
     }
+
     .testimonio-texto {
         font-size: 14px;
     }

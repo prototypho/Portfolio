@@ -1,0 +1,119 @@
+/* Feedback Link Styling */
+.feedback-link {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.feedback-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ffd700;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.feedback-link:hover {
+  color: #ffea70;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+.feedback-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Feedback Header with Google Logo and Stars */
+.feedback-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.3);
+}
+
+.google-logo-container {
+  flex-shrink: 0;
+}
+
+#feedback-google-logo {
+  height: 32px;
+  width: auto;
+  filter: brightness(1.1);
+}
+
+/* Star Rating */
+.feedback-stars {
+  display: flex;
+  gap: 4px;
+  font-size: 1.5rem;
+}
+
+.feedback-stars .star {
+  color: #666;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.feedback-stars .star.filled {
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+  animation: starPop 0.4s ease backwards;
+}
+
+@keyframes starPop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Feedback Content Styling */
+.feedback-content {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 215, 0, 0.05);
+  border-left: 3px solid #ffd700;
+  border-radius: 8px;
+}
+
+.feedback-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin: 0;
+  font-style: italic;
+}
+
+#feedback-customer-name {
+  background: linear-gradient(135deg, #ffd700, #ffea70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 540px) {
+  .feedback-content {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .feedback-content p {
+    font-size: 0.9rem;
+  }
+}
