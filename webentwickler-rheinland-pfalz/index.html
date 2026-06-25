@@ -10,7 +10,7 @@
     <meta name="author" content="Jonathan Rodriguez - JR Developer" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jr-developer.de/webentwickler-rheinland-pfalz/" />
+    <meta property="og:url" content="https://jr-developer.de/" />
     <meta property="og:title" content="Webentwickler & Softwareentwickler in Deutschland | JR Developer" />
     <meta property="og:description" content="Maßgeschneiderte Webentwicklung, APIs, SEO und technischer Support für Unternehmen." />
     <meta property="og:image" content="https://jr-developer.de/assets/img/og-image.jpg?v=2" />
@@ -20,7 +20,7 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <link rel="canonical" href="https://jr-developer.de/webentwickler-rheinland-pfalz/" />
+    <link rel="canonical" href="https://jr-developer.de/" />
     <link rel="alternate" hreflang="de-DE" href="https://jr-developer.de/" />
     <link rel="alternate" hreflang="en" href="https://jr-developer.de/en/" />
     <link rel="alternate" hreflang="es" href="https://jr-developer.de/es/" />
@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Racing+Sans+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/tecno.css" />
     <link rel="stylesheet" href="assets/css/proy.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="assets/css/img_titulo.css" />
     <link rel="stylesheet" href="assets/css/clientes.css" />
     <link rel="stylesheet" href="assets/css/modal.css" />
+    <link rel="stylesheet" href="assets/css/feedback.css" />
     <link rel="stylesheet" href="assets/css/social_nav.css">
     <link rel="stylesheet" href="assets/css/top.css">
     <link rel="stylesheet" href="assets/css/heroline.css">
@@ -67,13 +68,14 @@
     }
     </script>
     <!-- FIN Estilos para el fondo de Three.js -->
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "JR Developer",
       "url": "https://jr-developer.de/webentwickler-rheinland-pfalz/",
-      "image": "https://jr-developer.de/assets/img/og-image.jpg?v=2",
+      "image": "https://jr-developer.de/assets/img/og-image.jpg",
       "telephone": "+49 160 7532093",
       "email": "info@jr-developer.de",
       "address": {
@@ -107,6 +109,11 @@
 
 </head>
 <body>
+  <h2 class="seo-only">
+    Webentwicklung & Softwarelösungen für Unternehmen in Rheinland-Pfalz
+    Warum Unternehmen aus der Eifel mit JR Developer arbeiten
+    Webdesign, APIs & SEO – lokal betreut
+  </h2>
 
   <div class="page">
     <!-- NAVBAR -->
@@ -124,7 +131,7 @@
         </nav>
 
         <div class="nav__lang" id="nav-lang">
-          <a class="lang-pill" href="/index.html" data-lang="de" aria-label="Deutsch">
+          <a class="lang-pill" href="#" data-lang="de" aria-label="Deutsch">
             <img class="lang-flag" src="assets/img/svg-png/flag_g.png" alt="DE">
             <span class="lang-text" data-glitch="DE">DE</span>
           </a>
@@ -139,7 +146,7 @@
         </div>
 
         <button id="btn-abrir-modal" class="btn-cyberpunk nav__ctaBtn">
-          Kontakt aufnehmen <img class="envio-ico" src="../assets/img/envio.gif" alt="">
+          Kontakt aufnehmen <img class="envio-ico" src="assets/img/envio.gif" alt="">
         </button>
 
         <!-- Hamburguesa (solo visible en mobile) -->
@@ -164,7 +171,7 @@
 
         <div class="nav__panelLang">
           <!-- Reutiliza tus pills -->
-          <a class="lang-pill" href="/index.html" data-lang="de" aria-label="Deutsch">
+          <a class="lang-pill" href="#" data-lang="de" aria-label="Deutsch">
             <img class="lang-flag" src="assets/img/svg-png/flag_g.png" alt="DE">
             <span class="lang-text" data-glitch="DE">DE</span>
           </a>
@@ -179,7 +186,7 @@
         </div>
 
         <button class="btn-cyberpunk nav__panelCta" id="btn-abrir-modal-mobile">
-          Kontakt aufnehmen <img class="envio-ico" src="../assets/img/envio.gif" alt="">
+          Kontakt aufnehmen <img src="assets/img/envio.gif" alt="">
         </button>
       </div>
     </header>
@@ -187,6 +194,7 @@
 
     <!-- HERO -->
     <section class="hero" id="inicio">
+      
       <div class="hero-left">
         <div class="hero-pill">
           <span class="hero-pill-dot"></span>
@@ -212,6 +220,7 @@
           <span class="cursor"></span>
         </h1>
 
+
         <h2 class="hero-sub reveal"> 
           Für Unternehmen in Gerolstein, Daun, Bitburg, Trier und Umgebung.
         </h2>
@@ -225,9 +234,6 @@
           <span>damit Ihre Marke glänzt</span>
           <span>als Premiumprodukt.</span>
         </p>
-
-
-
 
         <div class="hero-actions">
           <a class="btn-primary" href="#proyectos">
@@ -261,7 +267,7 @@
               <!-- Imagen final -->
               <div class="hero-main-image-wrap">
                 <video 
-                  src="../assets/video/video.mp4"
+                  src="/assets/video/video.mp4"
                   class="hero-main-video"
                   autoplay muted loop playsinline>
                 </video>
@@ -492,7 +498,9 @@
           </div>
           <div class="drag-hint-wrapper" id="dragHintWrapper">
             <div class="drag-hint-content">
-              <div class="drag-hand"></div>
+              <div class="drag-hand">
+                <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="34px" fill="#e3e3e3"><path d="M468-240q-96-5-162-74t-66-166q0-100 70-170t170-70q97 0 166 66t74 162l-84-25q-13-54-56-88.5T480-640q-66 0-113 47t-47 113q0 57 34.5 100t88.5 56l25 84ZM821-60 650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"/></svg>
+              </div>
               <span>Zum Erkunden ziehen</span>
             </div>
           </div>
@@ -509,7 +517,7 @@
                     
                     <!-- Frente -->
                     <div class="project-front">
-                    <img src="/assets/img/proyecto1.png" alt="">
+                    <img src="/assets/img/seo_v.png" alt="">
                     </div>
 
                     <!-- Parte trasera -->
@@ -529,7 +537,7 @@
             <div class="project-card">
                 <div class="project-inner">
                     <div class="project-front">
-                    <img src="/assets/img/proyecto2.png" alt="">
+                    <img src="/assets/img/dig.png" alt="">
                     </div>
                     <div class="project-back">
                     <h3>📁 Von physischen zu digitalen Archiven: Digitalisieren Sie Ihr Unternehmen noch heute!</h3>
@@ -552,7 +560,7 @@
             <div class="project-card">
                 <div class="project-inner">
                     <div class="project-front">
-                    <img src="/assets/img/proyecto3.png" alt="Proyecto 3">
+                    <img src="/assets/img/desing.png" alt="Proyecto 3">
                     </div>
                     <div class="project-back">
                     <h3>✨ Wirkt Ihre Marke veraltet? Frischen Sie Ihr Image auf und erzielen Sie wieder Wirkung.</h3>
@@ -636,20 +644,54 @@
       </div>
     </section>
 
-    <h2 class="projects-title" id="proyectos">PROJEKTE</h2>
+        <h2 class="projects-title" id="proyectos">PROJEKTE</h2>
       <p class="projects-sub">Eine Auswahl aktueller Werke und Kommentare.</p>
     <!-- Testimonio 1 -->
+    <div class="testimonio-card-grid">
     <article class="testimonio-card">
       <img src="/assets/img/back_cliente1.png" alt="Logo cliente" class="logo-testimonio">
-      <h3>Jonathan Agneessens Immobilien</h3>
+      <h3>Webplattform zur Immobilienverwaltung</h3>
       <p class="testimonio-texto">
-        “Ich kann Jonathan Rodriguez wärmstens empfehlen. Er ist ein absoluter Profi, der uns eine neue Website gebaut hat, die genau unseren Vorstellungen entspricht: modern und wirklich auf dem neuesten Stand der Technik!Er hat immer ein offenes Ohr und geht auf alle Wünsche des Kunden ein. Hier ist man keine Nummer, sondern der Kunde ist wirklich König.Auch für die Nachbetreuung und, ganz wichtig, die Suchmaschinenoptimierung ist Jonathan Rodriguez von der Firma JR Developer der richtige Mann!”
+        Entwicklung einer Webanwendung von Grund auf mit HTML, CSS und JavaScript, inklusive eines vollständig maßgeschneiderten Verwaltungssystems für Wohnimmobilien. Die Plattform bietet Admin-Panels zur Echtzeit-Bearbeitung von Inhalten und Daten.
+
+        Das Backend wurde mit Node.js, Prisma und PHP umgesetzt und auf einem VPS-Server mit PM2 und Nginx bereitgestellt, wodurch hohe Performance, Stabilität und Skalierbarkeit gewährleistet werden.
       </p>
-      <p class="testimonio-cliente">– Jonathan Agneessens-</p>
+      <p class="testimonio-cliente">Kundenfeedback siehe <a href="#" class="feedback-link" data-customer-name="Jonathan Agneessens" data-rating="5" data-feedback="Ich kann Jonathan Rodriguez wärmstens empfehlen. Er ist ein absoluter Profi, der uns eine neue Website gebaut hat, die genau unseren Vorstellungen entspricht: modern und wirklich auf dem neuesten Stand der Technik!Er hat immer ein offenes Ohr und geht auf alle Wünsche des Kunden ein. Hier ist man keine Nummer, sondern der Kunde ist wirklich König. Auch für die Nachbetreuung und, ganz wichtig, die Suchmaschinenoptimierung ist Jonathan Rodriguez von der Firma JR Developer der richtige Mann!">hier</a></p>
       <a href="https://www.ja-immo-eifel.de/" target="_blank" class="btn-enlace">
         siehe Website
       </a>
     </article>
+
+
+    <article class="testimonio-card">
+      <img src="/assets/img/back_cliente2.png" alt="Logo cliente" class="logo-testimonio">
+      <h3>SwartzWäschen</h3>
+  <p class="testimonio-texto">
+    Entwicklung einer eleganten Website unter Verwendung von HTML, CSS und JavaScript.
+    Diese hochwertige, minimalistische Seite wurde mit akribischer Liebe zum Detail bei CSS3 gestaltet und zeichnet sich durch subtile JavaScript-Animationen aus, ohne den Inhalt zu überladen.
+    Die Grafikdesign-Elemente – wie Logo, Bilder, Stile, Schriftarten, Farben, Positionierung usw. – wurden vollständig von JR Developer erstellt.
+  </p>
+  <p class="testimonio-cliente">Kundenfeedback siehe <a href="#" class="feedback-link" data-customer-name="SwartzWäschen Team" data-rating="5"  data-feedback="Eine wunderbare Arbeit von Jonathan.Er ist nicht nur ein sehr freundlicher und sympathischer Mensch, sondern auch ein hervorragender Fachmann.
+    Wir sind begeistert und dankbar, unser Unternehmen hat nun ein neues digitales Gesicht.
+    Sehr zu empfehlen!!">hier</a></p>
+  <a href="https://schwartzwäsche.de/" target="_blank" class="btn-enlace">
+    siehe Website
+  </a>
+</article>
+
+
+  <article class="testimonio-card">
+      <img src="/assets/img/back_cliente3.png" alt="Logo cliente" class="logo-testimonio">
+      <h3>Solares Maxi Kiosco</h3>
+      <p class="testimonio-texto">
+        Website in der Produktion.
+      </p>
+      <p class="testimonio-cliente">Kundenfeedback siehe <a href="#" class="feedback-link" data-customer-name="Maxikiosco Solares" data-rating="5" data-feedback="Sehr zufrieden mit dem Ergebnis. Die Kommunikation war klar und das Design genau wie gewünscht. Sehr empfehlenswert!">hier</a></p>
+      <a href="/assets/img/back_cliente3.png" target="_blank" class="btn-enlace">
+        siehe Projekt
+      </a>
+    </article>
+    </div>
   </div>
 </section>
 
@@ -679,8 +721,8 @@
       </section>
       <!-- FIN SOBRE MI -->
       <div class="foot">
-        <div class="foot1">© <strong>Jonathan Rodriguez - JR Developer - Sarresdorfer Str. 51 - Gerolstein - Deutschland </strong></div>
-        <div class="foot2">Verfügbar für ausgewählte Projekte · Schreiben Sie mir an ✉ <a href="mailto:info@jr-developer.de">info@jr-developer.de</a></div>
+        <div class="foot1">© <strong>Jonathan Rodriguez - JR Developer - Sarresdorfer Str. 51 - Gerolstein - Deutschland / <a href="impressum.html"> Impressum</a> </strong></div>
+        <div class="foot2"><a href="/webentwickler-rheinland-pfalz/index.html">Webentwickler in Rheinland-Pfalz</a> · Schreiben Sie mir an ✉ <a href="mailto:info@jr-developer.de">info@jr-developer.de</a></div>
       </div>
       
   </footer>
@@ -791,9 +833,45 @@
             alt=""
             class="social-icon-png" />
       </a>
+      
+      <a class="social-float social-float--fb"
+        href="https://github.com/prototypho?tab=repositories"
+        target="_blank" rel="noopener"
+        aria-label="GitHub">
+        <img src="/assets/img/git.png"
+            alt=""
+            class="social-icon-png" />
+      </a>
 
     </div>
 
+
+
+
+    <!-- Feedback Modal -->
+    <div id="modal-feedback" class="modal-overlay" aria-hidden="true">
+      <div class="modal-contenido">
+        <button class="modal-cerrar" id="feedback-modal-close" aria-label="Cerrar">✕</button>
+        
+        <div class="feedback-header">
+          <div class="google-logo-container">
+            <img src="assets/img/google.png" alt="Google" id="feedback-google-logo">
+          </div>
+          <div class="feedback-stars" id="feedback-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+        </div>
+        
+        <h2 id="feedback-customer-name">Kunde</h2>
+        <div class="feedback-content">
+          <p id="feedback-text"></p>
+        </div>
+      </div>
+    </div>
 
     <!-- Cookie Banner (compact) -->
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie banner" hidden>
@@ -815,7 +893,7 @@
 
   
   <!-- SCRIPTS -->
-  
+  <script src="assets/js/hero_parallax.js"></script>
   <script type="module" src="assets/js/back.js"></script>
   <script src="assets/js/cookies.js"></script>
   <script src="assets/js/navbar.js"></script>
@@ -829,5 +907,6 @@
   <script src="assets/js/footer.js"></script>
   <script src="assets/js/rotate_card.js"></script>
   <script src="assets/js/modal.js"></script>
+  <script src="assets/js/feedback-modal.js"></script>
 </body>
 </html>
