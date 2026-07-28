@@ -321,7 +321,7 @@ class CardStreamController {
             { img: "assets/img/SEO.jpg", title: "SEO", desc: "Suchmaschinenoptimierung und verbesserte Web-Sichtbarkeit." },
             { img: "assets/img/dash.png", title: "Dashboard", desc: "Bedienfeld für Überwachung und Datenanalyse." },
             { img: "assets/img/hard.png", title: "Hardware", desc: "Verbesserte Hardwareleistung und -effizienz." },
-            { img: "assets/img/database.png", title: "Datenbank", desc: "Effizientes Datenmanagement und -organisation." },
+            { img: "assets/img/data.png", title: "Datenbank", desc: "Effizientes Datenmanagement und -organisation." },
         ];
 
         const item = cards[index % cards.length];

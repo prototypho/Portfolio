@@ -318,10 +318,10 @@ class CardStreamController {
 
         // Base de datos de tus tecnologías
         const cards = [
-            { img: "../assets/img/SEO.jpg", title: "SEO", desc: "Optimización para motores de búsqueda y mejora de la visibilidad web." },
-            { img: "../assets/img/dash.png", title: "Dashboard", desc: "Panel de control para monitoreo y análisis de datos." },
-            { img: "../assets/img/hardware.jpeg", title: "Optimización Hardware", desc: "Mejora del rendimiento y eficiencia del hardware." },
-            { img: "../assets/img/database.png", title: "Base de Datos", desc: "Gestión y organización eficiente de datos." },
+            { img: "../assets/img/SEO.jpg", title: "SEO", desc: "Optimization for search engines and improved web visibility." },
+            { img: "../assets/img/dash.png", title: "Dashboard", desc: "Control panel for monitoring and data analysis." },
+            { img: "../assets/img/hard.png", title: "Hardware Optimization", desc: "Improved hardware performance and efficiency." },
+            { img: "../assets/img/data.png", title: "Database", desc: "Efficient data management and organization." },
         ];
 
         const item = cards[index % cards.length];
