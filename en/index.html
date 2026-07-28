@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="../assets/css/cursor.css">
     <link rel="stylesheet" href="../assets/css/sub_cards.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/feedback.css">
 
     <!-- Estilos para el fondo de Three.js -->
     <style>
@@ -457,7 +458,9 @@
           </div>
           <div class="drag-hint-wrapper" id="dragHintWrapper">
             <div class="drag-hint-content">
-              <div class="drag-hand"></div>
+              <div class="drag-hand">
+                <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="34px" fill="#e3e3e3"><path d="M468-240q-96-5-162-74t-66-166q0-100 70-170t170-70q97 0 166 66t74 162l-84-25q-13-54-56-88.5T480-640q-66 0-113 47t-47 113q0 57 34.5 100t88.5 56l25 84ZM821-60 650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"/></svg>
+              </div>
               <span>Drag to explore</span>
             </div>
           </div>
@@ -546,7 +549,8 @@
     <section class="section" >
       <div class="section-header">
         <p class="section-sub hero-line" data-build>
-          I build digital experiences that combine technical performance, bold design, and a solid foundation for organic positioning.
+          I build digital experiences that combine technical performance,
+          bold design, and a solid foundation for organic positioning.
         </p>
       </div>
 
@@ -555,10 +559,10 @@
           
           <div>
             <div class="service-label">Web & UI</div>
-            <h3 class="service-title">High impact websites</h3>
+            <h3 class="service-title">High-impact websites</h3>
             <p class="service-desc">
-              Landing pages, corporate websites and portfolios with smooth animations,
-              microinteractions and product-level performance.
+              Landing pages, corporate websites, and portfolios with smooth animations,
+              microinteractions, and product-level performance.
             </p>
           </div>
           <div class="service-meta">
@@ -571,9 +575,9 @@
           
           <div>
             <div class="service-label">APIs & Integraciones</div>
-            <h3 class="service-title">Connected Architectures</h3>
+            <h3 class="service-title">Connected architectures</h3>
             <p class="service-desc">
-              Design and consumption of REST/GraphQL APIs, automations and
+              Design and consumption of REST/GraphQL APIs, automations, and
               backends ready to scale with security and best practices.
             </p>
           </div>
@@ -587,10 +591,10 @@
           
           <div>
             <div class="service-label">SEO & Tech</div>
-            <h3 class="service-title">Technical SEO & Support</h3>
+            <h3 class="service-title">Technical SEO & support</h3>
             <p class="service-desc">
-              Technical audits, optimization of loading times,
-              schema, accessibility and support in hardware/software.
+              Technical audits, loading time optimization,
+              schema, accessibility, and hardware/software support.
             </p>
           </div>
           <div class="service-meta">
@@ -602,17 +606,18 @@
     </section>
 
     <h2 class="projects-title" id="proyectos">Projects</h2>
-      <p class="projects-sub">A selection of recent work and testimonials.</p>
+      <p class="projects-sub">A selection of recently developed work and client feedback.</p>
     <!-- Testimonio 1 -->
+    <div class="testimonio-card-grid">
     <article class="testimonio-card">
       <img src="/assets/img/back_cliente1.png" alt="Logo cliente" class="logo-testimonio">
-      <h3>Jonathan Agneessens Immobilien</h3>
+      <h3>Property Management Web Platform</h3>
       <p class="testimonio-texto">
-        “I can highly recommend Jonathan Rodriguez. He's an absolute professional who built us a new website that perfectly matches our vision: modern and truly state-of-the-art! He's always approachable and caters to all of the client's needs. Here, you're not just a number; the customer is truly king. Jonathan Rodriguez from JR Developer is also the right person for after-sales support and, very importantly, search engine optimization!”
+        Development of a web application built from scratch using HTML, CSS, and JavaScript, integrating a housing management system fully customized to the client's needs. The platform includes admin panels for real-time content and data management. The backend has been developed with Node.js, Prisma, and PHP, and is deployed on a VPS server using PM2 and Nginx, guaranteeing performance, stability, and scalability. It is a 100% tailor-made solution designed to optimize the client's management processes.
       </p>
-      <p class="testimonio-cliente">– Jonathan Agneessens-</p>
+      <p class="testimonio-cliente">View client feedback <a href="#" class="feedback-link" data-customer-name="Jonathan Agneessens" data-rating="5" data-feedback="“I can highly recommend Jonathan Rodriguez. He's an absolute professional who built us a new website that perfectly matches our vision: modern and truly state-of-the-art! He's always approachable and caters to all of the client's needs. Here, you're not just a number; the customer is truly king. Jonathan Rodriguez from JR Developer is also the right person for after-sales support and, very importantly, search engine optimization!”">here</a></p>
       <a href="https://www.ja-immo-eifel.de/" target="_blank" class="btn-enlace">
-        Visit website
+        Visit Website
       </a>
     </article>
     <article class="testimonio-card">
@@ -621,23 +626,23 @@
       <p class="testimonio-texto">
         Website in production.
       </p>
-      <p class="testimonio-cliente"></p>
+      <p class="testimonio-cliente">View client feedback <a href="#" class="feedback-link" data-customer-name="SwartzWäschen Team" data-rating="5" data-feedback="“A wonderful job by Jonathan. He is not only a very friendly and likeable person, but also an excellent professional. We are thrilled and grateful, our company now has a new digital face. Highly recommended!”">here</a></p>
       <a href="https://prototypho.github.io/Schwartzwasche-WebSite/" target="_blank" class="btn-enlace">
-        Visit website
+        Visit Website
       </a>
     </article>
-
     <article class="testimonio-card">
       <img src="/assets/img/back_cliente3.png" alt="Logo cliente" class="logo-testimonio">
       <h3>Solares Maxi Kiosco</h3>
       <p class="testimonio-texto">
         Website in production.
       </p>
-      <p class="testimonio-cliente"></p>
+      <p class="testimonio-cliente">View client feedback <a href="#" class="feedback-link" data-customer-name="Maxikiosco Solares" data-rating="5" data-feedback="“Very satisfied with the result. The communication was clear and the design exactly as requested. Highly recommended!”">here</a></p>
       <a href="/assets/img/back_cliente3.png" target="_blank" class="btn-enlace">
         See Project
       </a>
     </article>
+    </div>
   </div>
 </section>
 
@@ -758,6 +763,33 @@
         <span class="btn-top__text">TOP</span>
       </span>
     </button>
+
+
+    <!-- Feedback Modal -->
+    <div id="modal-feedback" class="modal-overlay" aria-hidden="true">
+      <div class="modal-contenido">
+        <button class="modal-cerrar" id="feedback-modal-close" aria-label="Close">✕</button>
+        
+        <div class="feedback-header">
+          <div class="google-logo-container">
+            <img src="../assets/img/google.png" alt="Google" id="feedback-google-logo">
+          </div>
+          <div class="feedback-stars" id="feedback-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+        </div>
+        
+        <h2 id="feedback-customer-name">Client</h2>
+        <div class="feedback-content">
+          <p id="feedback-text"></p>
+        </div>
+      </div>
+    </div>
+
     <!-- Cookie Banner (compact) -->
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie banner" hidden>
       <div class="cookie-banner__inner">
@@ -779,10 +811,12 @@
   
   <!-- SCRIPTS -->
   <script src="../assets/js/cursor.js"></script>
+  <script src="../assets/js/cookies.js"></script>
   <script src="../assets/js/navbar.js"></script>
   <script type="module" src="../assets/js/back.js"></script>
   <script src="../assets/js/top.js"></script>
   <script src="../assets/js/img_titulo.js"></script>
+  <script src="../assets/js/feedback-modal.js"></script>
   <script src="../assets/js/heroline.js"></script>
   <script src="../assets/js/sub_cards.js"></script>
   <script src="assets/js/tecno.js"></script>
