@@ -295,12 +295,10 @@ body {
       position: relative;
       flex: 1;
       border-radius: 26px;
-      background: radial-gradient(circle at 0 0, rgba(245, 193, 75, 0.25), transparent 65%),
-        radial-gradient(circle at 100% 100%, rgba(207, 211, 221, 0.16), transparent 60%),
-        rgba(0, 0, 0, 0.137);
-      backdrop-filter: blur(20px);
+      
+      
       border: 1px solid var(--border-subtle);
-      padding: 20px 18px;
+      padding: 10px 8px;
       overflow: visible; /* clave para que salga la imagen */
       box-shadow:
         0 16px 40px rgba(0, 0, 0, 0.75),
@@ -346,9 +344,10 @@ body {
     .hero-main-image-wrap {
       position: relative;
       margin-top: 10px;
-      height: 310px;
+      left: 43px;
+      height: 350px;
       border-radius: 22px;
-      overflow: hidden;
+      overflow: visible;
     }
 
     /* Imagen principal que sale del contenedor */
@@ -370,7 +369,7 @@ body {
     .hero-main-video {
   position: absolute;
   inset: -16% -12%;
-  width: calc(100% + 14%);
+  width: calc(100% + 4%);
   height: calc(100% + 22%);
   object-fit: cover;
   filter: saturate(0.9) contrast(1.1);
@@ -429,6 +428,9 @@ body {
         left: 4%;
         bottom: -8%;
       }
+      .hero-main-image-wrap {
+      left: 013px;
+    }
     }
 
     .hero-status-label {

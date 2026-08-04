@@ -414,6 +414,9 @@ body {
         left: 4%;
         bottom: -8%;
       }
+      .hero-main-image-wrap {
+      left: 013px;
+    }
     }
 
     .hero-status-label {
