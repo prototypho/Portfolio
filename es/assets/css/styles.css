@@ -186,13 +186,6 @@ body {
   to { width: 100%; }
 }
 
-    .hero-sub {
-      width: 440px;
-      color: white;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
     /* Texto con animación tipo “reveal” */
     .reveal {
       overflow: hidden;
@@ -288,6 +281,11 @@ body {
       display: flex;
       align-items: stretch;
       margin-top: 10rem;
+    }
+    .hero-sub {
+      width: 100%;
+      color: white;
+      font-size: 24px;
     }
 
     .hero-card {

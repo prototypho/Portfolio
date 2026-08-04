@@ -186,13 +186,6 @@ body {
   to { width: 100%; }
 }
 
-    .hero-sub {
-      width: 440px;
-      color: white;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
     /* Texto con animación tipo “reveal” */
     .reveal {
       overflow: hidden;
@@ -289,17 +282,18 @@ body {
       align-items: stretch;
       margin-top: 10rem;
     }
+    .hero-sub {
+      width: 100%;
+      color: white;
+      font-size: 24px;
+    }
 
     .hero-card {
       position: relative;
       flex: 1;
       border-radius: 26px;
-      background: radial-gradient(circle at 0 0, rgba(245, 193, 75, 0.25), transparent 65%),
-        radial-gradient(circle at 100% 100%, rgba(207, 211, 221, 0.16), transparent 60%),
-        rgba(0, 0, 0, 0.137);
-      backdrop-filter: blur(20px);
       border: 1px solid var(--border-subtle);
-      padding: 20px 18px;
+      padding: 10px 8px;
       overflow: visible; /* clave para que salga la imagen */
       box-shadow:
         0 16px 40px rgba(0, 0, 0, 0.75),
@@ -348,6 +342,7 @@ body {
       height: 310px;
       border-radius: 22px;
       overflow: hidden;
+      left: 6%;
     }
 
     /* Imagen principal que sale del contenedor */
