@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="assets/css/sub_cards.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/social.css">
+    <link rel="stylesheet" href="assets/css/slider3d.css">
 
     <!-- Estilos para el fondo de Three.js -->
     <style>
@@ -583,25 +584,18 @@
     </section>   
   </div>
 
-  
-
-  <!-- PROYECTOS DE CLIENTES -->
-  <section class="testimonios-cyberpunk">
-  <div class="testimonios-grid">
-
-    <!-- SUB-CARDS -->
-    <section class="section" >
+  <!-- PROYECTOS DE CLIENTES EN SLIDER 3D -->
+   <section class="testimonios-cyberpunk">
+    <section class="section">
       <div class="section-header">
-        <p class="section-sub hero-line" data-build>
-          Ich entwickle digitale Erlebnisse, die technische Leistungsfähigkeit, kühnes Design und eine solide Grundlage für organisches Positioning vereinen.
-        </p>
+        <p class="section-sub hero-line is-built is-animating" data-build=""><span class="piece" style="--tx: 0px; --ty: 14px; --rot: 1deg; transition-delay: 27.5136ms;"><span>Ich</span></span> <span class="piece" style="--tx: 14px; --ty: 10px; --rot: -2deg; transition-delay: 50.7697ms;"><span>entwickle</span></span> <span class="piece" style="--tx: 0px; --ty: -14px; --rot: -1deg; transition-delay: 89.6043ms;"><span>digitale</span></span> <span class="piece" style="--tx: 14px; --ty: 10px; --rot: -2deg; transition-delay: 86.1776ms;"><span>Erlebnisse,</span></span> <span class="piece" style="--tx: 18px; --ty: 0px; --rot: 2deg; transition-delay: 114.802ms;"><span>die</span></span> <span class="piece" style="--tx: 14px; --ty: 10px; --rot: -2deg; transition-delay: 152.541ms;"><span>technische</span></span> <span class="piece" style="--tx: 0px; --ty: -14px; --rot: -1deg; transition-delay: 196.581ms;"><span>Leistungsfähigkeit,</span></span> <span class="piece" style="--tx: -18px; --ty: 0px; --rot: -2deg; transition-delay: 201.609ms;"><span>kühnes</span></span> <span class="piece" style="--tx: -14px; --ty: -10px; --rot: 2deg; transition-delay: 236.26ms;"><span>Design</span></span> <span class="piece" style="--tx: -18px; --ty: 0px; --rot: -2deg; transition-delay: 273.276ms;"><span>und</span></span> <span class="piece" style="--tx: -18px; --ty: 0px; --rot: -2deg; transition-delay: 290.612ms;"><span>eine</span></span> <span class="piece" style="--tx: 18px; --ty: 0px; --rot: 2deg; transition-delay: 336.138ms;"><span>solide</span></span> <span class="piece" style="--tx: -14px; --ty: -10px; --rot: 2deg; transition-delay: 370.741ms;"><span>Grundlage</span></span> <span class="piece" style="--tx: -18px; --ty: 0px; --rot: -2deg; transition-delay: 393.46ms;"><span>für</span></span> <span class="piece" style="--tx: -18px; --ty: 0px; --rot: -2deg; transition-delay: 421.082ms;"><span>organisches</span></span> <span class="piece" style="--tx: 14px; --ty: 10px; --rot: -2deg; transition-delay: 432.334ms;"><span>Positioning</span></span> <span class="piece" style="--tx: 18px; --ty: 0px; --rot: 2deg; transition-delay: 459.693ms;"><span>vereinen.</span></span> </p>
       </div>
 
-      <div class="services-grid" data-stagger="services">
-        <article class="service-card" data-stagger-item>
+      <div class="services-grid is-in" data-stagger="services">
+        <article class="service-card" data-stagger-item="">
           
           <div>
-            <div class="service-label">Web & UI</div>
+            <div class="service-label">Web &amp; UI</div>
             <h3 class="service-title">Websites mit hoher Wirkung</h3>
             <p class="service-desc">
               Landingpages, Unternehmenswebsites und Portfolios mit flüssigen Animationen,
@@ -614,10 +608,10 @@
           </div>
         </article>
 
-        <article class="service-card" data-stagger-item>
+        <article class="service-card" data-stagger-item="">
           
           <div>
-            <div class="service-label">APIs & Integrationen</div>
+            <div class="service-label">APIs &amp; Integrationen</div>
             <h3 class="service-title">Vernetzte Architekturen</h3>
             <p class="service-desc">
               Entwicklung und Nutzung von REST/GraphQL-APIs, Automatisierungen und
@@ -630,10 +624,10 @@
           </div>
         </article>
 
-        <article class="service-card" data-stagger-item>
+        <article class="service-card" data-stagger-item="">
           
           <div>
-            <div class="service-label">SEO & Tech</div>
+            <div class="service-label">SEO &amp; Tech</div>
             <h3 class="service-title">Technisches SEO und Support</h3>
             <p class="service-desc">
               Technische Audits, Optimierung der Ladezeiten,
@@ -647,70 +641,189 @@
         </article>
       </div>
     </section>
+  <section class="banner" id="proyectos">
+        <div class="content">
+            <h1 data-content="PROJEKTE">
+                PROJEKTE
+            </h1>
+            <div class="author">
+                <p><b>Web Design</b></p>
+                <p>
+                    Eine Auswahl aktueller Werke und Kommentare.
+                </p>
+            </div>
+            <div class="model"></div>
+        </div>
+        <div class="slider" style="--quantity: 8">
+            <!-- Project 1 (JA Immo) -->
+            <div class="item" style="--position: 1" 
+                 data-title="Webplattform zur Immobilienverwaltung" 
+                 data-desc="Entwicklung einer Webanwendung von Grund auf mit HTML, CSS und JavaScript, inklusive eines vollständig maßgeschneiderten Verwaltungssystems für Wohnimmobilien. Die Plattform bietet Admin-Panels zur Echtzeit-Bearbeitung von Inhalten und Daten. Das Backend wurde mit Node.js, Prisma und PHP umgesetzt und auf einem VPS-Server mit PM2 und Nginx bereitgestellt, wodurch hohe Performance, Stabilität und Skalierbarkeit gewährleistet werden." 
+                 data-tech="HTML, CSS, JavaScript, Node.js, Prisma, PHP, VPS, PM2, Nginx" 
+                 data-image="/assets/img/back_cliente1.png"
+                 data-link="https://www.ja-immo-eifel.de/"
+                 data-link-text="siehe Website"
+                 data-customer-name="Jonathan Agneessens"
+                 data-rating="5"
+                 data-feedback="Ich kann Jonathan Rodriguez wärmstens empfehlen. Er ist ein absoluter Profi, der uns eine neue Website gebaut hat, die genau unseren Vorstellungen entspricht: modern und wirklich auf dem neuesten Stand der Technik!Er hat immer ein offenes Ohr und geht auf alle Wünsche des Kunden ein. Hier ist man keine Nummer, sondern der Kunde ist wirklich König. Auch für die Nachbetreuung und, ganz wichtig, die Suchmaschinenoptimierung ist Jonathan Rodriguez von der Firma JR Developer der richtige Mann!">
+                <a href="https://www.ja-immo-eifel.de/" target="_blank" class="slider-item-link">ja-immo-eifel.de</a>
+                <img src="/assets/img/back_cliente1.png" alt="Webplattform zur Immobilienverwaltung">
+                <button class="info-btn" aria-label="Ver detalles">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </button>
+            </div>
+            <!-- Project 2 (SwartzWäschen) -->
+            <div class="item" style="--position: 2" 
+                 data-title="SwartzWäschen" 
+                 data-desc="Entwicklung einer eleganten Website unter Verwendung von HTML, CSS und JavaScript. Diese hochwertige, minimalistische Seite wurde mit akribischer Liebe zum Detail bei CSS3 gestaltet und zeichnet sich durch subtile JavaScript-Animationen aus, ohne den Inhalt zu überladen. Die Grafikdesign-Elemente – wie Logo, Bilder, Stile, Schriftarten, Farben, Positionierung usw. – wurden vollständig von JR Developer erstellt." 
+                 data-tech="HTML, CSS3, JavaScript, UI/UX Design, Logo Design" 
+                 data-image="/assets/img/back_cliente2.png"
+                 data-link="https://schwartzwäsche.de/"
+                 data-link-text="siehe Website"
+                 data-customer-name="SwartzWäschen Team"
+                 data-rating="5"
+                 data-feedback="Eine wunderbare Arbeit von Jonathan.Er ist nicht nur ein sehr freundlicher und sympathischer Mensch, sondern auch ein hervorragender Fachmann. Wir sind begeistert und dankbar, unser Unternehmen hat nun ein neues digitales Gesicht. Sehr zu empfehlen!!">
+                <a href="https://schwartzwäsche.de/" target="_blank" class="slider-item-link">schwartzwäsche.de</a>
+                <img src="/assets/img/back_cliente2.png" alt="SwartzWäschen">
+                <button class="info-btn" aria-label="Ver detalles">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </button>
+            </div>
+            <!-- Project 3 (Janna Schwartz) -->
+            <div class="item" style="--position: 3" 
+                 data-title="Janna Schwartz" 
+                 data-desc="Entwicklung einer eleganten Website für Janna Schwartz, basierend auf ihren detaillierten Entwürfen. Die Seite wurde sorgfältig umgesetzt, wobei das Layout, das Design und die Farbkombinationen direkt ihren Vorgaben entsprachen. Die Implementierung umfasste moderne Webstandards und sorgfältige Detailarbeit, um eine hochwertige und responsive Darstellung zu gewährleisten." 
+                 data-tech="HTML, CSS, JavaScript, Web Standards, Responsive Design" 
+                 data-image="/assets/img/back_cliente4.png"
+                 data-link="https://halloichbinjanna.de"
+                 data-link-text="siehe Website"
+                 data-customer-name="Janna Schwartz"
+                 data-rating="5"
+                 data-feedback="Einfach wunderschön! Meine Güte, ist das geil! Jonathan macht wirklich eine Mega-Arbeit. Ich bin überglücklich mit der neuen Website und kann ihn absolut jedem weiterempfehlen.">
+                <a href="https://halloichbinjanna.de" target="_blank" class="slider-item-link">halloichbinjanna.de</a>
+                <img src="/assets/img/back_cliente4.png" alt="Janna Schwartz">
+                <button class="info-btn" aria-label="Ver detalles">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </button>
+            </div>
+            <!-- Project 4 (Solares Maxi Kiosco) -->
+            <div class="item" style="--position: 4" 
+                 data-title="Solares Maxi Kiosco" 
+                 data-desc="Website in der producción." 
+                 data-tech="HTML, CSS, JavaScript, In Production" 
+                 data-image="/assets/img/back_cliente3.png"
+                 data-link="/assets/img/back_cliente3.png"
+                 data-link-text="siehe Projekt"
+                 data-customer-name="Maxikiosco Solares"
+                 data-rating="5"
+                 data-feedback="Sehr zufrieden mit dem Ergebnis. Die Kommunikation war klar und das Design genau wie gewünscht. Sehr empfehlenswert!">
+                <a href="/assets/img/back_cliente3.png" target="_blank" class="slider-item-link">solareskiosco.de (Prod)</a>
+                <img src="/assets/img/back_cliente3.png" alt="Solares Maxi Kiosco">
+                <button class="info-btn" aria-label="Ver detalles">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </button>
+            </div>
+            <!-- Project 5 (JA Immo - Duplicate) -->
+            <div class="item" style="--position: 5" 
+                 data-title="Webplattform zur Immobilienverwaltung" 
+                 data-desc="Entwicklung einer Webanwendung von Grund auf mit HTML, CSS und JavaScript, inklusive eines vollständig maßgeschneiderten Verwaltungssystems für Wohnimmobilien. Die Plattform bietet Admin-Panels zur Echtzeit-Bearbeitung von Inhalten und Daten. Das Backend wurde mit Node.js, Prisma und PHP umgesetzt und auf einem VPS-Server mit PM2 und Nginx bereitgestellt, wodurch hohe Performance, Stabilität und Skalierbarkeit gewährleistet werden." 
+                 data-tech="HTML, CSS, JavaScript, Node.js, Prisma, PHP, VPS, PM2, Nginx" 
+                 data-image="/assets/img/back_cliente1.png"
+                 data-link="https://www.ja-immo-eifel.de/"
+                 data-link-text="siehe Website"
+                 data-customer-name="Jonathan Agneessens"
+                 data-rating="5"
+                 data-feedback="Ich kann Jonathan Rodriguez wärmstens empfehlen. Er ist ein absoluter Profi, der uns eine neue Website gebaut hat, die genau unseren Vorstellungen entspricht: modern und wirklich auf dem neuesten Stand der Technik!Er hat immer ein offenes Ohr und geht auf alle Wünsche des Kunden ein. Hier ist man keine Nummer, sondern der Kunde ist wirklich König. Auch für die Nachbetreuung und, ganz wichtig, die Suchmaschinenoptimierung ist Jonathan Rodriguez von der Firma JR Developer der richtige Mann!">
+                <a href="https://www.ja-immo-eifel.de/" target="_blank" class="slider-item-link">ja-immo-eifel.de</a>
+                <img src="/assets/img/back_cliente1.png" alt="Webplattform zur Immobilienverwaltung">
+                <button class="info-btn" aria-label="Ver detalles">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </button>
+            </div>
+            <!-- Project 6 (SwartzWäschen - Duplicate) -->
+            <div class="item" style="--position: 6" 
+                 data-title="SwartzWäschen" 
+                 data-desc="Entwicklung einer eleganten Website unter Verwendung von HTML, CSS und JavaScript. Diese hochwertige, minimalistische Seite wurde mit akribischer Liebe zum Detail bei CSS3 gestaltet und zeichnet sich durch subtile JavaScript-Animationen aus, ohne den Inhalt zu überladen. Die Grafikdesign-Elemente – wie Logo, Bilder, Stile, Schriftarten, Farben, Positionierung usw. – wurden vollständig von JR Developer erstellt." 
+                 data-tech="HTML, CSS3, JavaScript, UI/UX Design, Logo Design" 
+                 data-image="/assets/img/back_cliente2.png"
+                 data-link="https://schwartzwäsche.de/"
+                 data-link-text="siehe Website"
+                 data-customer-name="SwartzWäschen Team"
+                 data-rating="5"
+                 data-feedback="Eine wunderbare Arbeit von Jonathan.Er ist nicht nur ein sehr freundlicher und sympathischer Mensch, sondern auch ein hervorragender Fachmann. Wir sind begeistert und dankbar, unser Unternehmen hat nun ein neues digitales Gesicht. Sehr zu empfehlen!!">
+                <a href="https://schwartzwäsche.de/" target="_blank" class="slider-item-link">schwartzwäsche.de</a>
+                <img src="/assets/img/back_cliente2.png" alt="SwartzWäschen">
+                <button class="info-btn" aria-label="Ver detalles">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </button>
+            </div>
+            <!-- Project 7 (Janna Schwartz - Duplicate) -->
+            <div class="item" style="--position: 7" 
+                 data-title="Janna Schwartz" 
+                 data-desc="Entwicklung einer eleganten Website für Janna Schwartz, basierend auf ihren detaillierten Entwürfen. Die Seite wurde sorgfältig umgesetzt, wobei das Layout, das Design und die Farbkombinationen direkt ihren Vorgaben entsprachen. Die Implementierung umfasste moderne Webstandards und sorgfältige Detailarbeit, um eine hochwertige und responsive Darstellung zu gewährleisten." 
+                 data-tech="HTML, CSS, JavaScript, Web Standards, Responsive Design" 
+                 data-image="/assets/img/back_cliente4.png"
+                 data-link="https://halloichbinjanna.de"
+                 data-link-text="siehe Website"
+                 data-customer-name="Janna Schwartz"
+                 data-rating="5"
+                 data-feedback="Einfach wunderschön! Meine Güte, ist das geil! Jonathan macht wirklich eine Mega-Arbeit. Ich bin überglücklich mit der neuen Website und kann ihn absolut jedem weiterempfehlen.">
+                <a href="https://halloichbinjanna.de" target="_blank" class="slider-item-link">halloichbinjanna.de</a>
+                <img src="/assets/img/back_cliente4.png" alt="Janna Schwartz">
+                <button class="info-btn" aria-label="Ver detalles">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </button>
+            </div>
+            <!-- Project 8 (Solares Maxi Kiosco - Duplicate) -->
+            <div class="item" style="--position: 8" 
+                 data-title="Solares Maxi Kiosco" 
+                 data-desc="Website in der Produktion." 
+                 data-tech="HTML, CSS, JavaScript, In Production" 
+                 data-image="/assets/img/back_cliente3.png"
+                 data-link="/assets/img/back_cliente3.png"
+                 data-link-text="siehe Projekt"
+                 data-customer-name="Maxikiosco Solares"
+                 data-rating="5"
+                 data-feedback="Sehr zufrieden mit dem Ergebnis. Die Kommunikation war klar und das Design genau wie gewünscht. Sehr empfehlenswert!">
+                <a href="/assets/img/back_cliente3.png" target="_blank" class="slider-item-link">solareskiosco.de (Prod)</a>
+                <img src="/assets/img/back_cliente3.png" alt="Solares Maxi Kiosco">
+                <button class="info-btn" aria-label="Ver detalles">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </button>
+            </div>
+        </div>
+    </section>
 
-    <h2 class="projects-title" id="proyectos">PROJEKTE</h2>
-      <p class="projects-sub">Eine Auswahl aktueller Werke und Kommentare.</p>
-    <!-- Testimonio 1 -->
-    <div class="testimonio-card-grid">
-    <article class="testimonio-card">
-      <img src="/assets/img/back_cliente1.png" alt="Logo cliente" class="logo-testimonio">
-      <h3>Webplattform zur Immobilienverwaltung</h3>
-      <p class="testimonio-texto">
-        Entwicklung einer Webanwendung von Grund auf mit HTML, CSS und JavaScript, inklusive eines vollständig maßgeschneiderten Verwaltungssystems für Wohnimmobilien. Die Plattform bietet Admin-Panels zur Echtzeit-Bearbeitung von Inhalten und Daten.
+    <!-- Overlay de Fondo para el Drawer -->
+    <div id="drawer-overlay" class="drawer-overlay"></div>
 
-        Das Backend wurde mit Node.js, Prisma und PHP umgesetzt und auf einem VPS-Server mit PM2 und Nginx bereitgestellt, wodurch hohe Performance, Stabilität und Skalierbarkeit gewährleistet werden.
-      </p>
-      <p class="testimonio-cliente">Kundenfeedback siehe <a href="#" class="feedback-link" data-customer-name="Jonathan Agneessens" data-rating="5" data-feedback="Ich kann Jonathan Rodriguez wärmstens empfehlen. Er ist ein absoluter Profi, der uns eine neue Website gebaut hat, die genau unseren Vorstellungen entspricht: modern und wirklich auf dem neuesten Stand der Technik!Er hat immer ein offenes Ohr und geht auf alle Wünsche des Kunden ein. Hier ist man keine Nummer, sondern der Kunde ist wirklich König. Auch für die Nachbetreuung und, ganz wichtig, die Suchmaschinenoptimierung ist Jonathan Rodriguez von der Firma JR Developer der richtige Mann!">hier</a></p>
-      <a href="https://www.ja-immo-eifel.de/" target="_blank" class="btn-enlace">
-        siehe Website
-      </a>
-    </article>
-
-
-    <article class="testimonio-card">
-      <img src="/assets/img/back_cliente2.png" alt="Logo cliente" class="logo-testimonio">
-      <h3>SwartzWäschen</h3>
-  <p class="testimonio-texto">
-    Entwicklung einer eleganten Website unter Verwendung von HTML, CSS und JavaScript.
-    Diese hochwertige, minimalistische Seite wurde mit akribischer Liebe zum Detail bei CSS3 gestaltet und zeichnet sich durch subtile JavaScript-Animationen aus, ohne den Inhalt zu überladen.
-    Die Grafikdesign-Elemente – wie Logo, Bilder, Stile, Schriftarten, Farben, Positionierung usw. – wurden vollständig von JR Developer erstellt.
-  </p>
-  <p class="testimonio-cliente">Kundenfeedback siehe <a href="#" class="feedback-link" data-customer-name="SwartzWäschen Team" data-rating="5"  data-feedback="Eine wunderbare Arbeit von Jonathan.Er ist nicht nur ein sehr freundlicher und sympathischer Mensch, sondern auch ein hervorragender Fachmann.
-    Wir sind begeistert und dankbar, unser Unternehmen hat nun ein neues digitales Gesicht.
-    Sehr zu empfehlen!!">hier</a></p>
-  <a href="https://schwartzwäsche.de/" target="_blank" class="btn-enlace">
-    siehe Website
-  </a>
-</article>
-
-<article class="testimonio-card">
-      <img src="/assets/img/back_cliente4.png" alt="Logo cliente" class="logo-testimonio">
-      <h3>Janna Schwartz</h3>
-  <p class="testimonio-texto">
-    Entwicklung einer eleganten Website für Janna Schwartz, basierend auf ihren detaillierten Entwürfen.
-    Die Seite wurde sorgfältig umgesetzt, wobei das Layout, das Design und die Farbkombinationen direkt ihren Vorgaben entsprachen.
-    Die Implementierung umfasste moderne Webstandards und sorgfältige Detailarbeit, um eine hochwertige und responsive Darstellung zu gewährleisten.
-  </p>
-  <p class="testimonio-cliente">Kundenfeedback siehe <a href="#" class="feedback-link" data-customer-name="Janna Schwartz" data-rating="5"  data-feedback="Einfach wunderschön! Meine Güte, ist das geil! Jonathan macht wirklich eine Mega-Arbeit. Ich bin überglücklich mit der neuen Website und kann ihn absolut jedem weiterempfehlen.">hier</a></p>
-  <a href="https://halloichbinjanna.de" target="_blank" class="btn-enlace">
-    siehe Website
-  </a>
-</article>
-
-
-  <article class="testimonio-card">
-      <img src="/assets/img/back_cliente3.png" alt="Logo cliente" class="logo-testimonio">
-      <h3>Solares Maxi Kiosco</h3>
-      <p class="testimonio-texto">
-        Website in der Produktion.
-      </p>
-      <p class="testimonio-cliente">Kundenfeedback siehe <a href="#" class="feedback-link" data-customer-name="Maxikiosco Solares" data-rating="5" data-feedback="Sehr zufrieden mit dem Ergebnis. Die Kommunikation war klar und das Design genau wie gewünscht. Sehr empfehlenswert!">hier</a></p>
-      <a href="/assets/img/back_cliente3.png" target="_blank" class="btn-enlace">
-        siehe Projekt
-      </a>
-    </article>
+    <!-- Panel Lateral Izquierdo (Info Drawer) -->
+    <div id="info-drawer" class="info-drawer">
+        <button class="close-btn" id="close-drawer" aria-label="Cerrar panel">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="drawer-content">
+            <div class="drawer-img-container">
+                <img id="drawer-img" src="" alt="Vista previa del proyecto">
+            </div>
+            <h2 id="drawer-title" class="drawer-title">Título del Proyecto</h2>
+            <div class="drawer-divider"></div>
+            <p id="drawer-desc" class="drawer-desc">Descripción detallada del proyecto...</p>
+            <div class="drawer-section">
+                <h3>Tecnologías</h3>
+                <div id="drawer-tech" class="tech-tags"></div>
+            </div>
+            <div class="drawer-section" style="margin-top: 15px;">
+                <a href="#" target="_blank" id="drawer-link" class="btn-enlace" style="display: inline-block; width: max-content; text-align: center; text-decoration: none;">siehe Website</a>
+            </div>
+            <div class="drawer-section" id="drawer-feedback-container" style="margin-top: 15px;">
+                <h3>Kundenfeedback</h3>
+                <p class="testimonio-cliente">Kundenfeedback siehe <a href="#" id="drawer-feedback-link" class="feedback-link" data-customer-name="" data-rating="" data-feedback="">hier</a></p>
+            </div>
+        </div>
     </div>
-  </div>
+   </section>
+
 </section>
 
 <div class="separacion" style="height: 40rem;" id="sobre-mi"></div>
@@ -926,5 +1039,6 @@
   <script src="assets/js/rotate_card.js"></script>
   <script src="assets/js/modal.js"></script>
   <script src="assets/js/feedback-modal.js"></script>
+  <script src="assets/js/slider3d.js"></script>
 </body>
 </html>

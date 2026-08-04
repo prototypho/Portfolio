@@ -1,0 +1,466 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 260px;
+    height: 195px;
+    top: 25%;
+    left: calc(65% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(-16deg) rotateY(var(--rotateY, 0deg));
+    z-index: 2;
+    will-change: transform;
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(320px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    outline: 1px solid transparent;
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 14em;
+    line-height: 1em;
+    color: #5b5b5e;
+    position: relative;
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+.banner .content .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+    color: #fefeff;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model{
+    background-image: url(/assets/img/jrdev.png);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    right: 45%;
+    background-size: auto 60%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+@media screen and (max-width: 1023px) {
+    .banner .slider{
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(210px);
+    }
+    .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+    .banner .content .author{
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner {
+        height: 480px;
+        margin-top: 150px;
+    }
+    .banner .slider {
+        width: 200px;
+        height: 150px;
+        left: calc(50% - 100px);
+        top: 220px;
+    }
+    .banner .slider .item {
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(250px);
+    }
+    .banner .content {
+        top: 15px;
+        bottom: auto;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .banner .content h1 {
+        font-size: 3em;
+        margin: 0;
+        text-align: center;
+    }
+    .banner .content .author {
+        text-align: center;
+        max-width: 90%;
+        margin-top: 5px;
+        padding: 0;
+        font-size: 0.85rem;
+    }
+    .banner .content .model {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 200px;
+        top: 180px;
+        bottom: auto;
+        background-size: contain;
+        background-position: center;
+        opacity: 0.35;
+        z-index: 1;
+    }
+}
+
+/* ==========================================
+   INFO BUTTON & DETAILS DRAWER STYLING
+   ========================================== */
+
+/* Botón de Información sobre cada Imagen */
+.banner .slider .item .info-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(14, 13, 13, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    pointer-events: auto; /* Garantizar que reciba clics */
+}
+
+.banner .slider .item .info-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.banner .slider .item .info-btn:hover {
+    background: #ffffff;
+    color: #0e0d0d;
+    border-color: #ffffff;
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.banner .slider .item .info-btn:hover svg {
+    transform: rotate(15deg);
+}
+
+.banner .slider .item .info-btn:active {
+    transform: scale(0.95);
+}
+
+/* Overlay de Fondo para Desenfoque */
+.drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 12, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 998; /* Justo debajo del drawer */
+}
+
+.drawer-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Panel Lateral Izquierdo (Info Drawer) */
+.info-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 440px;
+    max-width: 100%;
+    background: rgba(15, 15, 18, 0.82);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 20px 0 80px rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding: 50px 35px;
+    color: #f5f5f7;
+}
+
+.info-drawer.active {
+    transform: translateX(0);
+}
+
+/* Scrollbar Personalizado para el Drawer */
+.info-drawer::-webkit-scrollbar {
+    width: 6px;
+}
+.info-drawer::-webkit-scrollbar-track {
+    background: transparent;
+}
+.info-drawer::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+.info-drawer::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Botón para Cerrar Panel */
+.info-drawer .close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #a2a2a6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.info-drawer .close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.info-drawer .close-btn:active {
+    transform: scale(0.9);
+}
+
+/* Contenido del Drawer */
+.drawer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.drawer-img-container {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.drawer-img, #drawer-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: transform 0.5s ease;
+}
+
+
+
+.drawer-title {
+    font-family: 'ICA Rubrik', sans-serif;
+    font-size: 2.2em;
+    line-height: 1.1em;
+    font-weight: 900;
+    margin: 5px 0 0 0;
+    background: linear-gradient(135deg, #ffffff 40%, #a2a2a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-divider {
+    height: 2px;
+    width: 60px;
+    background: linear-gradient(90deg, #d2d2d2 30%, transparent 100%);
+    margin-top: -10px;
+}
+
+.drawer-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95em;
+    line-height: 1.6em;
+    color: #b0b0b8;
+    font-weight: 300;
+    margin: 0;
+}
+
+.drawer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.drawer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #8e8e93;
+    margin: 0;
+    font-weight: 600;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75em;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    color: #d2d2d2;
+    font-weight: 400;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tech-tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Responsivo para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    .info-drawer {
+        width: 100vw;
+        padding: 40px 25px;
+    }
+    
+    .drawer-title {
+        font-size: 1.8em;
+    }
+}
+
+/* ==========================================
+   DIRECT WEB LINK & DRAWER BUTTON OVERRIDES
+   ========================================== */
+
+/* Enlace directo a la web del proyecto arriba de cada imagen */
+.banner .slider .item .slider-item-link {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-decoration: none;
+    background: rgba(15, 15, 18, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 3px 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.banner .slider .item .slider-item-link:hover {
+    background: #ffffff;
+    color: #0e0d0d;
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Anular la posición fixed de .btn-enlace dentro del drawer de información */
+#info-drawer .btn-enlace {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    display: inline-flex;
+    margin-top: 5px;
+    width: max-content;
+    box-sizing: border-box;
+}
