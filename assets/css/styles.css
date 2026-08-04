@@ -189,13 +189,6 @@ body {
   to { width: 100%; }
 }
 
-    .hero-sub {
-      width: 440px;
-      color: white;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
     /* Texto con animación tipo “reveal” */
     .reveal {
       overflow: hidden;
@@ -229,6 +222,11 @@ body {
       flex-wrap: wrap;
       gap: 14px;
       margin-top: 12px;
+    }
+    .hero-sub {
+      width: 100%;
+      color: white;
+      font-size: 24px;
     }
 
     .btn-primary,
@@ -475,3 +473,11 @@ body {
   line-height: 1.6;
   white-space: pre-wrap;
 }
+
+/* --- GLOBAL FONT FAMILY "Racing Sans One" --- */
+body, p, h1, h2, h3, h4, h5, h6, a, button, select, input, textarea, li, strong, b, em, label {
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: lighter;
+}
+
+

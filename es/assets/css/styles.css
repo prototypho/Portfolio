@@ -451,3 +451,9 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+/* --- GLOBAL FONT FAMILY "Racing Sans One" --- */
+body, p, h1, h2, h3, h4, h5, h6, a, button, select, input, textarea, li, strong, b, em, label {
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: lighter;
+}
