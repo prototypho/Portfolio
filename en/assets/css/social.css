@@ -1,0 +1,65 @@
+/* ============================
+   FLOATING SOCIAL ICONS (PNG ONLY)
+   ============================ */
+.social-dock{
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  display: grid;
+  gap: 14px;
+}
+
+/* botón invisible */
+.social-float{
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+
+  /* zona táctil cómoda */
+  width: 56px;
+  height: 56px;
+}
+
+/* PNG */
+.social-icon-png{
+  width: 72px;
+  height: 72px;
+  display: block;
+  object-fit: contain;
+
+  /* estabilidad mobile */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.git-png{
+  width: 42px !important;
+  right: 6px;
+
+}
+
+/* Hover desktop */
+.social-float:hover .social-icon-png{
+  transform: scale(1.06);
+}
+
+
+/* Active (tap feedback) */
+.social-float:active .social-icon-png{
+  transform: scale(0.96);
+}
+
+/* Mobile: abajo y sin filtros pesados */
+@media (max-width: 520px){
+  .social-dock{
+    top: auto;
+    bottom: calc(96px + env(safe-area-inset-bottom)); /* evita chocar con btn-top */
+    transform: none;
+  }
+
+}
