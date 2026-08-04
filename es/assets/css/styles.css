@@ -294,10 +294,6 @@ body {
       position: relative;
       flex: 1;
       border-radius: 26px;
-      background: radial-gradient(circle at 0 0, rgba(245, 193, 75, 0.25), transparent 65%),
-        radial-gradient(circle at 100% 100%, rgba(207, 211, 221, 0.16), transparent 60%),
-        rgba(0, 0, 0, 0.137);
-      backdrop-filter: blur(20px);
       border: 1px solid var(--border-subtle);
       padding: 20px 18px;
       overflow: visible; /* clave para que salga la imagen */
@@ -345,9 +341,10 @@ body {
     .hero-main-image-wrap {
       position: relative;
       margin-top: 10px;
-      height: 310px;
+      left: 43px;
+      height: 350px;
       border-radius: 22px;
-      overflow: hidden;
+      overflow: visible;
     }
 
     /* Imagen principal que sale del contenedor */
