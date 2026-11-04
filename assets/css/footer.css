@@ -26,6 +26,7 @@
 }
 
 .about-photo {
+  position: relative;
   flex: 1;
   max-width: 480px;
   border-radius: 20px;
@@ -42,7 +43,26 @@
   height: 100%;
   object-fit: cover;
   transform: translateZ(40px);
-  transition: transform 0.2s ease-out;
+  transition: opacity 0.5s ease-in-out, transform 0.2s ease-out;
+  display: block;
+}
+
+.about-photo__base {
+  opacity: 1;
+}
+
+.about-photo__hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.about-photo:hover .about-photo__base {
+  opacity: 0;
+}
+
+.about-photo:hover .about-photo__hover {
+  opacity: 1;
 }
 
 /* TEXTO */
